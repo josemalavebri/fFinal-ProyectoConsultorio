@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Vista\Cita_Form\Agregar_Cita_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Cita_Form\Cita_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Medico_forms\AgregarMedico_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Medico_forms\EditarMedico_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Medico_forms\Medico_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Paciente_forms\add_Paciente_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Paciente_forms\edit_Paciente_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Paciente_forms\Paciente_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Principal_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
