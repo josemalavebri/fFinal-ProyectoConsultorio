@@ -1,0 +1,16 @@
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\bin\Debug\net8.0\Controller.deps.json
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\bin\Debug\net8.0\Controller.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\bin\Debug\net8.0\Controller.pdb
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\bin\Debug\net8.0\Model.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\bin\Debug\net8.0\Model.pdb
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.csproj.AssemblyReference.cache
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.AssemblyInfoInputs.cache
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.AssemblyInfo.cs
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.csproj.CoreCompileInputs.cache
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.csproj.Up2Date
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\refint\Controller.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.pdb
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\ref\Controller.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\Controller\obj\Debug\net8.0\Controller.sourcelink.json
