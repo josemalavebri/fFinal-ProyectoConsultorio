@@ -60,7 +60,7 @@
             // 
             // resetear_button
             // 
-            resetear_button.Location = new Point(397, 173);
+            resetear_button.Location = new Point(397, 185);
             resetear_button.Name = "resetear_button";
             resetear_button.Size = new Size(93, 38);
             resetear_button.TabIndex = 26;
