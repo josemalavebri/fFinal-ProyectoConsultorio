@@ -34,7 +34,7 @@ namespace Controladores.Controlador.Controlers
 
         public DataTable ObtenerPorEspecialidad<T>(T entidad) where T : IEntidad
         {
-            return controladorCreator.ObtenerPropiedadEspecifica("Especialidad", entidad, E_ROL._MEDICO_TURNO);
+            return controladorCreator.ObtenerPropiedadEspecifica("especialidad_id", entidad, E_ROL._TURNOS_ESPECIALIDAD);
         }
 
 

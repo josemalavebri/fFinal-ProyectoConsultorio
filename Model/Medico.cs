@@ -14,7 +14,7 @@ namespace Modelo
         private string apellido;
         private string correo;
         private int telefono;
-        private int especialidad;
+        private int especialidad_id;
 
         public Medico()
         {
@@ -22,7 +22,7 @@ namespace Modelo
             cedula = 0;
             nombre = string.Empty;
             apellido = string.Empty;
-            especialidad = 0;
+            especialidad_id = 0;
             telefono = 0;
             correo = string.Empty;
         }
@@ -36,7 +36,7 @@ namespace Modelo
             this.nombre = nombre;
             this.cedula = cedula;
             this.apellido = apellido;
-            this.especialidad = especialidad;
+            this.especialidad_id = especialidad_id;
             this.telefono = telefono;
             this.correo = correo;
         }
@@ -48,6 +48,11 @@ namespace Modelo
         public string Apellido { get => apellido; set => apellido = value; }
         public int Telefono { get => telefono; set => telefono = value; }
         public string Correo { get => correo; set => correo = value; }
-        public int Especialidad_id { get => especialidad; set => especialidad = value; }
+        public int Especialidad_id { get => especialidad_id; set => especialidad_id = value; }
+
+        public override string ToString()
+        {
+            return Nombre + " " + Apellido;
+        }
     }
 }

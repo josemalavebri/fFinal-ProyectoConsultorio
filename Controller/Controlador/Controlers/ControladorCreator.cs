@@ -37,7 +37,7 @@ namespace ConsultorioPrivado.Controlador.Controlers
         {
             lista = propiedadesCreator.CrearListaPropiedadesEspecifica(propiedad,entidad);
             string procedimientoAlmacenado = executeRolDB.crearProcedimientoAlmacenado(E_CODIGO_SP.SP_OBTENER_POR, rol);
-            return accesoDatos.ObtenerPorEntidad(procedimientoAlmacenado);
+            return accesoDatos.ObtenerPorID(procedimientoAlmacenado,lista);
         }
 
         public DataTable ObtenerPorCedula<T>(T entidad, E_ROL rol) where T : IEntidad

@@ -15,6 +15,8 @@ namespace ConsultorioPrivado.Controlador.Controlers
 
         public ControladorCita() 
         {
+
+            
             controladorCreator=new ControladorCreator();
         }
 

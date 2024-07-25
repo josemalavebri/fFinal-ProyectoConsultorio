@@ -17,17 +17,21 @@ namespace ConsultorioPrivado.Vista.Cita_Form
     public partial class Agregar_Cita_Form : Form
     {
         //OBJETOS
-        private Modelo.Pacientes paciente;
+        private Pacientes paciente;
         private CitaMedica citaMedica;
-        private Medico medico;
+        private Medico medicoActual;
         private int idTurno;
         private MedicoTurno medicoTurno;
         private bool nuevoPaciente;
-        List<Pacientes> listaPacientes;
+        private List<Pacientes> listaPacientes;
+        private List<Medico> listaMedico;
+
 
         //CONTROLADORES
         private ControladorCita controladorCita;
         private ControladorTurno controladorTurno;
+        private ControladorMedico controladorMedico;
+
 
 
         public Agregar_Cita_Form(Pacientes paciente)
@@ -38,24 +42,38 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             InitializeComponent();
             controladorTurno = new ControladorTurno();
             controladorCita = new ControladorCita();
-            citaMedica = new CitaMedica();
+            controladorMedico = new ControladorMedico();
+                       citaMedica = new CitaMedica();
             this.paciente = paciente;
+
             this.nuevoPaciente = nuevoPaciente;
         }
 
         private void Agregar_Cita_Form_Load(object sender, EventArgs e)
         {
-            CargarGridTurnos();
+            CargarGrid();
             HabilitarEventoReset();
             Button_ControlForms.DesabilitarBotones(resetear_button);
-
         }
 
-        private void CargarGridTurnos()
+        private void CargarGrid()
         {
-           // turnos_dgv.DataSource = controladorTurno.ObtenerTurnos();
             combo_Pacientes.DataSource = listaPacientes;
-            combo_Pacientes.DisplayMember = "Nombre";
+            var listaDeMedicos = new List<Medico>();
+            DataTable dataTable = controladorMedico.ObtenerPorMedico();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                var medico = new Medico
+                {
+                    Id = Convert.ToInt32(row["Id"]),
+                    Nombre = row["Nombre"].ToString(),
+                    Apellido = row["Apellido"].ToString(),
+                    Especialidad_id = Convert.ToInt32(row["idEspecialidadFk"].ToString())
+                };
+
+                listaDeMedicos.Add(medico);
+            }
+            combo_Medicos.DataSource = listaDeMedicos;
 
 
         }
@@ -90,12 +108,29 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         }
         private void combo_Pacientes_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            paciente = (Modelo.Pacientes)combo_Pacientes.SelectedItem;
+            paciente = (Pacientes)combo_Pacientes.SelectedItem;
         }
         private void combo_Medicos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            medico = (Medico)combo_Pacientes.SelectedItem;
-            turnos_dgv.DataSource = controladorTurno.ObtenerPorEspecialidad(medico);
+            medicoActual = (Medico)combo_Medicos.SelectedItem;
+            MessageBox.Show("medico" + medicoActual.Especialidad_id+"  "+ medicoActual.ToString());
+            turnos_dgv.DataSource = controladorTurno.ObtenerPorEspecialidad(medicoActual);
+
+            /*
+            if (combo_Medicos.SelectedItem != null)
+            {
+                DataRowView selectedRow = combo_Medicos.SelectedItem as DataRowView;
+
+                if (selectedRow != null)
+                {
+                    medicoActual.Especialidad_id = Convert.ToInt32(selectedRow["Especialidad_id"]);
+                    int medicoId = Convert.ToInt32(selectedRow["Id"]);
+
+                    MessageBox.Show("ID OBTENIDO CON EXITO" + medicoId);
+                }
+            }
+            turnos_dgv.DataSource = controladorTurno.ObtenerPorEspecialidad(medicoActual);
+            */
         }
 
 

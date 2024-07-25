@@ -14,5 +14,6 @@ namespace ConsultorioPrivado.Controlador.Enums
         SP_ELIMINAR,
         SP_CREAR,
         SP_ACTUALIZAR,
+
     }
 }

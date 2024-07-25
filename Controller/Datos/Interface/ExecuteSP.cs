@@ -98,71 +98,26 @@ namespace ConsultorioPrivado.Datos.Interface
 
         public DataTable ObtenerPorCedula(string sp_query, List<ParametrosCreator> lista)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return obj_bd.ExecuteSPQuery(sp_query, lista);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("error  al obtener la cedula del " + sp_query + " " + ex.Message);
+            }
         }
 
         public DataTable ObtenerPorID(string sp_query, List<ParametrosCreator> lista)
         {
-            throw new NotImplementedException();
-        }
-        // Ver tabla entidad
-
-
-        /*
-        public DataTable ObtenerPorId(E_ROL rol, List<CD_Parameter_SP> lista)
-        {
-            //<CD_Parameter_SP> lista = new List<CD_Parameter_SP> ();
-            return obj_bd.ExecuteSPQuery(crearCadenaFinal(E_CODIGO_SP.SP_OBTENER_POR_ID, rol), lista);
-        }
-        //Crear entidad
-        public bool Crear(E_ROL rol, List<CD_Parameter_SP> lista)
-        {
             try
             {
-                return obj_bd.ExecuteSPNonQuery(crearCadenaFinal(E_CODIGO_SP.SP_CREAR, rol), lista);
+                return obj_bd.ExecuteSPQuery(sp_query, lista);
             }
             catch (Exception ex)
             {
-                throw new Exception("error al guardar un nuevo " + rol + " " + ex.Message);
+                throw new Exception("error  al obtener la cedula del " + sp_query + " " + ex.Message);
             }
         }
-        //Eliminar entidad
-        public bool Eliminar(E_ROL rol, List<CD_Parameter_SP> lista)
-        {
-            try
-            {
-                return obj_bd.ExecuteSPNonQuery(crearCadenaFinal(E_CODIGO_SP.SP_ELIMINAR, rol), lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error al eliminar el " + rol + " " + ex.Message);
-            }
-        }
-        //Actualiza entidad
-        public bool Actualizar(E_ROL rol, List<CD_Parameter_SP> lista)
-        {
-            try
-            {
-                return obj_bd.ExecuteSPNonQuery(crearCadenaFinal(E_CODIGO_SP.SP_ACTUALIZAR, rol), lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error al actualizar el " + rol + " " + ex.Message);
-            }
-        }
-
-        public DataTable ObtenerPorCedula(E_ROL rol, List<CD_Parameter_SP> lista)
-        {
-            try
-            {
-                return obj_bd.ExecuteSPQuery(crearCadenaFinal(E_CODIGO_SP.SP_OBTENER_POR_CEDULA, rol), lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error al buscar el " + rol + " " + ex.Message);
-            }
-        }
-
-        */
     }
 }

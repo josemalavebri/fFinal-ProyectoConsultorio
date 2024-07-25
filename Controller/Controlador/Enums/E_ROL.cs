@@ -13,6 +13,7 @@ namespace ConsultorioPrivado.Controlador.Enums
         _MEDICO,
         _CITA,
         _MEDICO_TURNO,
-        _MEDICO_ESPECIALIDAD,   
+        _MEDICO_ESPECIALIDAD,
+        _TURNOS_ESPECIALIDAD
     }
 }

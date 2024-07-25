@@ -107,7 +107,5 @@ namespace ConsultorioPrivado.Controlador.Creators
                 return SqlDbType.Text;
             throw new ArgumentException("Tipo no soportado");
         }
-
-
     }
 }

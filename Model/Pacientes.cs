@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,5 +45,10 @@ namespace Modelo
         public string Apellido { get => apellido; set => apellido = value; }
         public string Correo { get => correo; set => correo = value; }
         public int Telefono { get => telefono; set => telefono = value; }
+
+        public override string ToString()
+        {
+            return Nombre+" "+Apellido;
+        }
     }
 }
