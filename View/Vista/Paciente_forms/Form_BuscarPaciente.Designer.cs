@@ -1,6 +1,6 @@
 ﻿namespace ConsultorioPrivado.Vista.Paciente
 {
-    partial class Paciente_form
+    partial class Form_BuscarPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_BuscarPaciente));
             resetear_button = new Button();
-            nuevo_button = new Button();
+            btn_guardar = new Button();
             buscar_button = new Button();
             cedula_text = new TextBox();
             label4 = new Label();
             label1 = new Label();
-            paciente_dgv = new DataGridView();
-            Editar = new DataGridViewImageColumn();
-            Eliminar = new DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)paciente_dgv).BeginInit();
+            dgv_paciente = new DataGridView();
+            label2 = new Label();
+            txt_pacienteSelec = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dgv_paciente).BeginInit();
             SuspendLayout();
             // 
             // resetear_button
@@ -51,15 +50,15 @@
             resetear_button.UseVisualStyleBackColor = true;
             resetear_button.Click += resetear_button_Click;
             // 
-            // nuevo_button
+            // btn_guardar
             // 
-            nuevo_button.Location = new Point(2, 56);
-            nuevo_button.Name = "nuevo_button";
-            nuevo_button.Size = new Size(172, 47);
-            nuevo_button.TabIndex = 28;
-            nuevo_button.Text = "Nuevo";
-            nuevo_button.UseVisualStyleBackColor = true;
-            nuevo_button.Click += nuevo_button_Click;
+            btn_guardar.Location = new Point(358, 303);
+            btn_guardar.Name = "btn_guardar";
+            btn_guardar.Size = new Size(172, 47);
+            btn_guardar.TabIndex = 28;
+            btn_guardar.Text = "Seleccionar";
+            btn_guardar.UseVisualStyleBackColor = true;
+            btn_guardar.Click += btn_guardar_Click;
             // 
             // buscar_button
             // 
@@ -89,58 +88,56 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(2, 118);
+            label1.Location = new Point(10, 63);
             label1.Name = "label1";
             label1.Size = new Size(120, 15);
             label1.TabIndex = 24;
             label1.Text = "Pacientes Agregados:";
             // 
-            // paciente_dgv
+            // dgv_paciente
             // 
-            paciente_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            paciente_dgv.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
-            paciente_dgv.Location = new Point(4, 151);
-            paciente_dgv.Name = "paciente_dgv";
-            paciente_dgv.RowHeadersWidth = 51;
-            paciente_dgv.Size = new Size(843, 191);
-            paciente_dgv.TabIndex = 23;
-            paciente_dgv.CellClick += paciente_dgv_CellClick;
+            dgv_paciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_paciente.Location = new Point(12, 96);
+            dgv_paciente.Name = "dgv_paciente";
+            dgv_paciente.RowHeadersWidth = 51;
+            dgv_paciente.Size = new Size(843, 191);
+            dgv_paciente.TabIndex = 23;
+            dgv_paciente.CellContentClick += dgv_paciente_CellContentClick;
             // 
-            // Editar
+            // label2
             // 
-            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Editar.HeaderText = "Editar";
-            Editar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Editar.MinimumWidth = 6;
-            Editar.Name = "Editar";
-            Editar.Width = 43;
+            label2.AutoSize = true;
+            label2.Location = new Point(16, 324);
+            label2.Name = "label2";
+            label2.Size = new Size(125, 15);
+            label2.TabIndex = 30;
+            label2.Text = "Paciente Seleccionado";
             // 
-            // Eliminar
+            // txt_pacienteSelec
             // 
-            Eliminar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Image = (Image)resources.GetObject("Eliminar.Image");
-            Eliminar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Eliminar.MinimumWidth = 6;
-            Eliminar.Name = "Eliminar";
-            Eliminar.Width = 56;
+            txt_pacienteSelec.Location = new Point(162, 316);
+            txt_pacienteSelec.Name = "txt_pacienteSelec";
+            txt_pacienteSelec.Size = new Size(128, 23);
+            txt_pacienteSelec.TabIndex = 31;
             // 
-            // Paciente_form
+            // Form_BuscarPaciente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(859, 400);
+            ClientSize = new Size(879, 449);
+            Controls.Add(txt_pacienteSelec);
+            Controls.Add(label2);
             Controls.Add(resetear_button);
-            Controls.Add(nuevo_button);
+            Controls.Add(btn_guardar);
             Controls.Add(buscar_button);
             Controls.Add(cedula_text);
             Controls.Add(label4);
             Controls.Add(label1);
-            Controls.Add(paciente_dgv);
+            Controls.Add(dgv_paciente);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Paciente_form";
+            Name = "Form_BuscarPaciente";
             Text = "Pacientes";
-            ((System.ComponentModel.ISupportInitialize)paciente_dgv).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_paciente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,13 +145,13 @@
         #endregion
 
         private Button resetear_button;
-        private Button nuevo_button;
+        private Button btn_guardar;
         private Button buscar_button;
         private TextBox cedula_text;
         private Label label4;
         private Label label1;
-        private DataGridView paciente_dgv;
-        private DataGridViewImageColumn Editar;
-        private DataGridViewImageColumn Eliminar;
+        private DataGridView dgv_paciente;
+        private Label label2;
+        private TextBox txt_pacienteSelec;
     }
 }

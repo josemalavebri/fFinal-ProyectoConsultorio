@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{9693554A-5961-4ABE-A27F-72454E413D93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Controller\Controller.csproj", "{9693554A-5961-4ABE-A27F-72454E413D93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{CE7E72E4-3CC1-4DC5-A593-8845B8DEDB60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{CE7E72E4-3CC1-4DC5-A593-8845B8DEDB60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{7ACC3CE9-8574-4B65-9099-29B35B8F488D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", "{7ACC3CE9-8574-4B65-9099-29B35B8F488D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

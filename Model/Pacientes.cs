@@ -10,6 +10,7 @@ namespace Modelo
     {
         private int id;
         private int cedula;
+        private int edad;
         private string nombre;
         private string apellido;
         private string correo;
@@ -25,7 +26,7 @@ namespace Modelo
             correo = string.Empty;
         }
 
-        public Pacientes(int id, int cedula, string nombre, string apellido, string correo, int telefono)
+        public Pacientes(int id, int cedula, string nombre, string apellido, string correo, int telefono, int edad)
         {
             this.id = id;
             this.cedula = cedula;
@@ -33,10 +34,12 @@ namespace Modelo
             this.apellido = apellido;
             this.correo = correo;
             this.telefono = telefono;
+            this.Edad = edad;
         }
 
         public int Id { get => id; set => id = value; }
         public int Cedula { get => cedula; set => cedula = value; }
+        public int Edad { get => edad; set => edad = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public string Correo { get => correo; set => correo = value; }

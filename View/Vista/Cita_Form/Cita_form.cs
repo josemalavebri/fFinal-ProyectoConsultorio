@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using ConsultorioPrivado.Vista.Paciente;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Vista.Cita_Form;
 using Vista.Utilidad;
 
 namespace ConsultorioPrivado.Vista.Cita_Form
@@ -22,7 +24,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private void nuevo_button_Click(object sender, EventArgs e)
         {
-            Form formcita = new Agregar_Cita_Form();
+            Form formcita = new Form_CitaTipo();
             formcita.ShowDialog();
         }
 

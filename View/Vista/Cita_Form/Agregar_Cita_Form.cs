@@ -17,35 +17,47 @@ namespace ConsultorioPrivado.Vista.Cita_Form
     public partial class Agregar_Cita_Form : Form
     {
         //OBJETOS
-        private Modelo.Pacientes pacientes;
+        private Modelo.Pacientes paciente;
         private CitaMedica citaMedica;
         private Medico medico;
         private int idTurno;
         private MedicoTurno medicoTurno;
+        private bool nuevoPaciente;
+        List<Pacientes> listaPacientes;
 
         //CONTROLADORES
         private ControladorCita controladorCita;
         private ControladorTurno controladorTurno;
 
 
-        public Agregar_Cita_Form()
+        public Agregar_Cita_Form(Pacientes paciente)
         {
+            listaPacientes = new List<Pacientes>();
+            listaPacientes.Clear();
+            listaPacientes.Add(paciente);
             InitializeComponent();
             controladorTurno = new ControladorTurno();
             controladorCita = new ControladorCita();
             citaMedica = new CitaMedica();
+            this.paciente = paciente;
+            this.nuevoPaciente = nuevoPaciente;
         }
 
         private void Agregar_Cita_Form_Load(object sender, EventArgs e)
         {
-            //CargarGridTurnos();
+            CargarGridTurnos();
             HabilitarEventoReset();
             Button_ControlForms.DesabilitarBotones(resetear_button);
+
         }
 
         private void CargarGridTurnos()
         {
-            turnos_dgv.DataSource = controladorTurno.ObtenerTurnos();
+           // turnos_dgv.DataSource = controladorTurno.ObtenerTurnos();
+            combo_Pacientes.DataSource = listaPacientes;
+            combo_Pacientes.DisplayMember = "Nombre";
+
+
         }
 
         private void HabilitarEventoReset()
@@ -71,14 +83,14 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private CitaMedica CrearObjetoCitaMedica()
         {
-            citaMedica.IdPaciente = pacientes.Id;
+            citaMedica.IdPaciente = paciente.Id;
             citaMedica.Descripcion = description_text.Text;
             citaMedica.IdMedicoTurno = idTurno;
             return citaMedica;
         }
         private void combo_Pacientes_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            pacientes = (Modelo.Pacientes)combo_Pacientes.SelectedItem;
+            paciente = (Modelo.Pacientes)combo_Pacientes.SelectedItem;
         }
         private void combo_Medicos_SelectedIndexChanged(object sender, EventArgs e)
         {

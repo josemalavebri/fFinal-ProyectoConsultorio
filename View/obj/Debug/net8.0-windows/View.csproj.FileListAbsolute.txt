@@ -74,3 +74,6 @@ C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\r
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.pdb
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.genruntimeconfig.cache
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ref\View.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Paciente.Form_BuscarPaciente.resources
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.Vista.Cita_Form.Form_CitaTipo.resources
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Paciente.add_CitaPaciente_form.resources

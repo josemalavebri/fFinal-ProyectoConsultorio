@@ -9,8 +9,6 @@ namespace ConsultorioPrivado.Utilidad.Forms
     public class Button_ControlForms
     {
 
-
-        
         public static void DesabilitarBotones(params Button[] botones)
         {
             IterarBotones(false, botones);
