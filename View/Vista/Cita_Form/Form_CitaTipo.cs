@@ -27,7 +27,7 @@ namespace View.Vista.Cita_Form
 
         private void btn_pacienteNuevo_Click(object sender, EventArgs e)
         {
-            Form form = new add_CitaPaciente_form();
+            Form form = new add_Paciente_form(true);
             form.ShowDialog();
             this.Close();
         }

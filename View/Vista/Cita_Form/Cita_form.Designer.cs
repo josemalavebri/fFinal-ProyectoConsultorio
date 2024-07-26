@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cita_form));
             resetear_button = new Button();
             nuevo_button = new Button();
             buscar_button = new Button();
@@ -36,8 +35,6 @@
             label4 = new Label();
             label1 = new Label();
             citas_dgv = new DataGridView();
-            Editar = new DataGridViewImageColumn();
-            Eliminar = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)citas_dgv).BeginInit();
             SuspendLayout();
             // 
@@ -97,31 +94,11 @@
             // citas_dgv
             // 
             citas_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            citas_dgv.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
             citas_dgv.Location = new Point(10, 149);
             citas_dgv.Name = "citas_dgv";
             citas_dgv.RowHeadersWidth = 51;
             citas_dgv.Size = new Size(851, 191);
             citas_dgv.TabIndex = 23;
-            // 
-            // Editar
-            // 
-            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Editar.HeaderText = "Editar";
-            Editar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Editar.MinimumWidth = 6;
-            Editar.Name = "Editar";
-            Editar.Width = 43;
-            // 
-            // Eliminar
-            // 
-            Eliminar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Image = (Image)resources.GetObject("Eliminar.Image");
-            Eliminar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Eliminar.MinimumWidth = 6;
-            Eliminar.Name = "Eliminar";
-            Eliminar.Width = 56;
             // 
             // Cita_form
             // 

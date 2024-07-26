@@ -40,6 +40,25 @@ namespace ConsultorioPrivado.Controlador.Creators
             return lista;
         }
 
+        public List<ParametrosCreator> ListarPropiedadNoId<T>( T entidad) where T : IEntidad
+        {
+            lista.Clear();
+            var propiedades = typeof(T).GetProperties();
+            foreach (var propiedad in propiedades)
+            {
+                if (!(propiedad.Name.ToLower() == "id"))
+                {
+                    var nombreParametro = $"@{propiedad.Name}";
+                    var valor = propiedad.GetValue(entidad);
+                    var tipo = MapearTipo(propiedad.PropertyType);
+                    lista.Add(new ParametrosCreator(nombreParametro, valor, tipo));
+                }
+            }
+            return lista;
+        }
+
+
+
         private List<ParametrosCreator> ListarPropiedadEspecifica<T>(string atributo,T entidad) where T : IEntidad
         {
             lista.Clear();

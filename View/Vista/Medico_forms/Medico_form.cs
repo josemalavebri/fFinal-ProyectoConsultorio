@@ -38,11 +38,7 @@ namespace ConsultorioPrivado.Vista
 
             int numero = medicos_dgv.ColumnCount;
 
-            medicos_dgv.Columns["Editar"].DisplayIndex = numero - 1;
-            medicos_dgv.Columns["Eliminar"].DisplayIndex = numero - 1;
-
-            medicos_dgv.Columns["Editar"].Width = 75;
-            medicos_dgv.Columns["Eliminar"].Width = 75;
+          
         }
 
         private void buscar_button_Click(object sender, EventArgs e)

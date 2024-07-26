@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_BuscarPaciente));
             resetear_button = new Button();
             nuevo_button = new Button();
             buscar_button = new Button();
@@ -36,8 +35,6 @@
             label4 = new Label();
             label1 = new Label();
             paciente_dgv = new DataGridView();
-            Editar = new DataGridViewImageColumn();
-            Eliminar = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)paciente_dgv).BeginInit();
             SuspendLayout();
             // 
@@ -69,6 +66,7 @@
             buscar_button.TabIndex = 27;
             buscar_button.Text = "Buscar";
             buscar_button.UseVisualStyleBackColor = true;
+            buscar_button.Click += buscar_button_Click;
             // 
             // cedula_text
             // 
@@ -98,32 +96,13 @@
             // paciente_dgv
             // 
             paciente_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            paciente_dgv.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
             paciente_dgv.Location = new Point(4, 151);
             paciente_dgv.Name = "paciente_dgv";
             paciente_dgv.RowHeadersWidth = 51;
             paciente_dgv.Size = new Size(843, 191);
             paciente_dgv.TabIndex = 23;
             paciente_dgv.CellClick += paciente_dgv_CellClick;
-            // 
-            // Editar
-            // 
-            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Editar.HeaderText = "Editar";
-            Editar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Editar.MinimumWidth = 6;
-            Editar.Name = "Editar";
-            Editar.Width = 43;
-            // 
-            // Eliminar
-            // 
-            Eliminar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Image = (Image)resources.GetObject("Eliminar.Image");
-            Eliminar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Eliminar.MinimumWidth = 6;
-            Eliminar.Name = "Eliminar";
-            Eliminar.Width = 56;
+            paciente_dgv.CellContentClick += paciente_dgv_CellContentClick;
             // 
             // Paciente_form
             // 
@@ -140,6 +119,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Paciente_form";
             Text = "Pacientes";
+            Load += Paciente_form_Load;
             ((System.ComponentModel.ISupportInitialize)paciente_dgv).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -154,7 +134,7 @@
         private Label label4;
         private Label label1;
         private DataGridView paciente_dgv;
-        private DataGridViewImageColumn Editar;
-        private DataGridViewImageColumn Eliminar;
+        private DataGridViewButtonColumn Editar;
+        private DataGridViewButtonColumn Eliminado;
     }
 }

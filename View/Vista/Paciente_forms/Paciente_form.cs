@@ -11,30 +11,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Utilidad;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
     public partial class Paciente_form : Form
     {
-        private ControladorPaciente controlador;
+        private ControladorPaciente controladorPaciente;
+        private Pacientes paciente;
         public Paciente_form()
         {
-            controlador = new ControladorPaciente();
+            controladorPaciente = new ControladorPaciente();
             InitializeComponent();
+            if (paciente == null)
+            {
+                paciente = new Pacientes();
+            }
         }
+
+
         private void CargarDataGrid()
         {
-            paciente_dgv.DataSource = controlador.ObtenerPorPaciente();
+
+            paciente_dgv.DataSource = controladorPaciente.ObtenerPorPaciente();
 
             int numero = paciente_dgv.ColumnCount;
 
-            paciente_dgv.Columns["Editar"].DisplayIndex = numero - 1;
-            paciente_dgv.Columns["Eliminar"].DisplayIndex = numero - 1;
 
-            paciente_dgv.Columns["Editar"].Width = 75;
-            paciente_dgv.Columns["Eliminar"].Width = 75;
 
         }
+
         private DialogResult MostrarMensaje()
         {
             DialogResult result = MessageBox.Show(
@@ -46,13 +52,16 @@ namespace ConsultorioPrivado.Vista.Paciente
         }
         private void nuevo_button_Click(object sender, EventArgs e)
         {
-            Form form = new add_Paciente_form();
+            Form form = new add_Paciente_form(false);
             form.ShowDialog();
+            CargarDataGrid();
         }
 
         private void resetear_button_Click(object sender, EventArgs e)
         {
             Text_ControlForms.EliminarTextos(cedula_text);
+            cedula_text.Focus();
+            CargarDataGrid();
         }
 
         private void paciente_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,15 +80,35 @@ namespace ConsultorioPrivado.Vista.Paciente
                 int id = Convert.ToInt32(paciente_dgv.CurrentRow.
 
                    Cells["Id"].Value.ToString()); ;
-                Pacientes Paciente = new Pacientes();
-                Paciente.Id = id;
+                
+                paciente.Id = id;
                 DialogResult result = MostrarMensaje();
                 if (result == DialogResult.OK)
                 {
-                    //  controladorGeneral.Eliminar(Paciente, E_ROL._MEDICO);
+                    controladorPaciente.EliminarPaciente(paciente);
                     CargarDataGrid();
                 }
             }
+        }
+
+        private void paciente_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Paciente_form_Load(object sender, EventArgs e)
+        {
+            CargarDataGrid();
+
+            DGVDisenio.Formato(paciente_dgv, 1);
+
+        }
+
+        private void buscar_button_Click(object sender, EventArgs e)
+        {
+            paciente.Cedula = Convert.ToInt32(cedula_text.Text.ToString());
+            paciente_dgv.DataSource = controladorPaciente.ObtenerPorCedula(paciente);
+
         }
     }
 }

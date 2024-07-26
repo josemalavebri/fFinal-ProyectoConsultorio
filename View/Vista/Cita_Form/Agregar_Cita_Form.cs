@@ -91,7 +91,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         {
             try
             {
-                CitaMedica citaMedica = CrearObjetoCitaMedica();
+                citaMedica = CrearObjetoCitaMedica();
                 if (controladorCita.CrearCita(citaMedica))
                     MessageBox.Show("Cita Creada Exitosamente");
             }

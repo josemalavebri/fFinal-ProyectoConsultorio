@@ -43,7 +43,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txt_edad = new TextBox();
             label6 = new Label();
             SuspendLayout();
             // 
@@ -172,12 +172,12 @@
             label1.TabIndex = 17;
             label1.Text = "Nombre";
             // 
-            // textBox1
+            // txt_edad
             // 
-            textBox1.Location = new Point(142, 87);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 35;
+            txt_edad.Location = new Point(142, 87);
+            txt_edad.Name = "txt_edad";
+            txt_edad.Size = new Size(100, 23);
+            txt_edad.TabIndex = 35;
             // 
             // label6
             // 
@@ -193,7 +193,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(296, 380);
-            Controls.Add(textBox1);
+            Controls.Add(txt_edad);
             Controls.Add(label6);
             Controls.Add(id_textBox);
             Controls.Add(label5);
@@ -235,7 +235,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txt_edad;
         private Label label6;
     }
 }

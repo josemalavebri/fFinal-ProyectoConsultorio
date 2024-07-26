@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medico_form));
             buscar_button = new Button();
             cedula_text = new TextBox();
             label4 = new Label();
             label1 = new Label();
             medicos_dgv = new DataGridView();
-            Editar = new DataGridViewImageColumn();
-            Eliminar = new DataGridViewImageColumn();
             nuevo_button = new Button();
             resetear_button = new Button();
             ((System.ComponentModel.ISupportInitialize)medicos_dgv).BeginInit();
@@ -79,29 +76,11 @@
             // medicos_dgv
             // 
             medicos_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            medicos_dgv.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
             medicos_dgv.Location = new Point(12, 146);
             medicos_dgv.Name = "medicos_dgv";
             medicos_dgv.Size = new Size(851, 191);
             medicos_dgv.TabIndex = 11;
             medicos_dgv.CellClick += medicos_dgv_CellClick;
-            // 
-            // Editar
-            // 
-            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Editar.HeaderText = "Editar";
-            Editar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Editar.Name = "Editar";
-            Editar.Width = 43;
-            // 
-            // Eliminar
-            // 
-            Eliminar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Image = (Image)resources.GetObject("Eliminar.Image");
-            Eliminar.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Eliminar.Name = "Eliminar";
-            Eliminar.Width = 56;
             // 
             // nuevo_button
             // 

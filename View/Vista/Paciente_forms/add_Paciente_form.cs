@@ -10,28 +10,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConsultorioPrivado.Vista.Cita_Form;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
     public partial class add_Paciente_form : Form
     {
-        ControladorPaciente controlador;
-        public add_Paciente_form()
+        private ControladorPaciente controladorPaciente;
+        private bool boolCita;
+
+        public add_Paciente_form(bool boolCita)
         {
             InitializeComponent();
+            controladorPaciente = new ControladorPaciente();
+            this.boolCita = boolCita;
         }
-       
-        /*private void resetearButtonEstado(bool estado)
-        {
-            Button_ControlForms.desabilitarHabilitarBotones(estado, resetear_button);
 
-        }
-        */
 
-        private Modelo.Pacientes crearPacienteEntidad()
+        private Pacientes crearPacienteEntidad()
         {
-            Modelo.Pacientes paciente = new Modelo.Pacientes();
+            Modelo.Pacientes paciente = new Pacientes();
             paciente.Cedula = Convert.ToInt32(cedula_textBox.Text.ToString());
+            paciente.Edad = Convert.ToInt32(txt_edad.Text.ToString());
             paciente.Nombre = nombre_textBox.Text.ToString();
             paciente.Apellido = apellido_textBox.Text.ToString();
             paciente.Correo = correo_textBox.Text.ToString();
@@ -39,23 +39,19 @@ namespace ConsultorioPrivado.Vista.Paciente
             return paciente;
         }
 
-        private void textBoxes_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
 
-            if (textBox != null)
-            {
-                Button_ControlForms.HabilitarBotones(resetear_button);
-            }
-        }
-        private void vaciarText()
+        private void HabilitarEventoReset()
         {
-            Text_ControlForms.EliminarTextos(cedula_textBox, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
+            Reset_ControlForms.Evento_HabilitarReset(resetear_button, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
         }
+
+        
 
         private void add_Paciente_form_Load(object sender, EventArgs e)
         {
-
+            cedula_textBox.Focus();
+            Button_ControlForms.DesabilitarBotones(resetear_button);
+            HabilitarEventoReset();
         }
 
         private void cancelar_button_Click(object sender, EventArgs e)
@@ -65,7 +61,30 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         private void agregar_button_Click(object sender, EventArgs e)
         {
+            Pacientes paciente = crearPacienteEntidad();
+            if (controladorPaciente.CrearPaciente(paciente))
+            {
+                MessageBox.Show("Paciente creado con exito");
+                this.Close();
+            }
+            if (boolCita)
+            {
+                Form form = new Agregar_Cita_Form(paciente);
+                form.ShowDialog();
+                this.Close();
 
+            }
+        }
+
+        private void resetear_button_Click(object sender, EventArgs e)
+        {
+            vaciarText();
+            resetear_button.Enabled = false;
+        }
+        private void vaciarText()
+        {
+            Text_ControlForms.EliminarTextos(cedula_textBox,txt_edad, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
+            cedula_textBox.Focus();
         }
     }
 }

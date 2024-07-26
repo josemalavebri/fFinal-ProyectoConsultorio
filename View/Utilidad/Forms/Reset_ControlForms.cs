@@ -8,9 +8,17 @@ namespace ConsultorioPrivado.Utilidad.Forms
 {
     internal class Reset_ControlForms
     {
+        private static bool textBoxesChanged = false;
+
+        public static void HabilitarBotones(Button resetButton, params TextBox[] textBoxes)
+        {
+            Evento_HabilitarReset(resetButton, textBoxes);
+            ActualizarEstadoBoton(resetButton);
+        }
+
         public static void Evento_HabilitarReset(Button resetButton, params TextBox[] textBoxes)
         {
-            CargarEventoReset(resetButton,textBoxes);
+            CargarEventoReset(resetButton, textBoxes);
         }
 
         private static void CargarEventoReset(Button resetButton, params TextBox[] textBoxes)
@@ -19,19 +27,24 @@ namespace ConsultorioPrivado.Utilidad.Forms
             {
                 if (textBox != null)
                 {
-                    textBox.TextChanged += TextBox_TextChanged;
-                    Button_ControlForms.HabilitarBotones(resetButton);
+                    textBox.TextChanged += (sender, e) => TextBox_TextChanged(sender, e, resetButton);
                 }
             }
         }
 
-        private static void TextBox_TextChanged(object sender, EventArgs e)
+        private static void TextBox_TextChanged(object sender, EventArgs e, Button resetButton)
         {
             TextBox textBox = sender as TextBox;
             if (textBox != null)
             {
-                MessageBox.Show("Cambiado con exito");
+                textBoxesChanged = true; 
+                ActualizarEstadoBoton(resetButton);
             }
+        }
+
+        private static void ActualizarEstadoBoton(Button resetButton)
+        {
+            resetButton.Enabled = textBoxesChanged;
         }
     }
 }

@@ -31,21 +31,23 @@ namespace ConsultorioPrivado.Vista.Paciente_forms
 
         private void agregarDatosFormularios()
         {
-            /*
+            
             Pacientes pacientes = new Pacientes();
             pacientes.Id = id;
-            DataTable datosPaciente = controlador.ObtenerPorId(id);
+            DataTable datosPaciente = controlador.ObtenerPorId(pacientes);
             if (datosPaciente.Rows.Count > 0)
             {
                 DataRow row = datosPaciente.Rows[0];
                 id_textBox.Text = row["id"].ToString();
                 nombre_textBox.Text = row["nombre"].ToString();
+                txt_edad.Text = row["edad"].ToString();
+
                 apellido_textBox.Text = row["apellido"].ToString();
                 cedula_textBox.Text = row["cedula"].ToString();
                 telefono_textBox.Text = row["telefono"].ToString();
                 correo_textBox.Text = row["correo"].ToString();
             }
-            */
+            
 
         }
 
@@ -70,16 +72,16 @@ namespace ConsultorioPrivado.Vista.Paciente_forms
         }
         private void vaciarTexts()
         {
-            Text_ControlForms.EliminarTextos(cedula_textBox, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
+            Text_ControlForms.EliminarTextos(cedula_textBox, txt_edad, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
         }
 
         private void agregar_button_Click(object sender, EventArgs e)
         {
-            Modelo.Pacientes pacientes = crearPacienteDatos();
+            Pacientes pacientes = crearPacienteDatos();
             if (controlador.ActualizarPaciente(pacientes))
             {
                 vaciarTexts();
-                MessageBox.Show("Medico Actualizado");
+                MessageBox.Show("Paciente Actualizado");
                 this.Close();
             }
         }
@@ -88,6 +90,8 @@ namespace ConsultorioPrivado.Vista.Paciente_forms
         {
             Pacientes pacientes = new Modelo.Pacientes();
             pacientes.Id = Convert.ToInt32(id_textBox.Text.ToString());
+            pacientes.Edad = Convert.ToInt32(txt_edad.Text.ToString());
+
             pacientes.Cedula = Convert.ToInt32(cedula_textBox.Text.ToString());
             pacientes.Nombre = nombre_textBox.Text.ToString();
             pacientes.Apellido = apellido_textBox.Text.ToString();

@@ -34,31 +34,7 @@ namespace ConsultorioPrivado.Datos.Interface
             }
         }
 
-        public DataTable ObtenerPorCedula(string sp_query)
-        {
-            try
-            {
-                List<ParametrosCreator> lista = new List<ParametrosCreator>();
-                return obj_bd.ExecuteSPQuery(sp_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error  al obtener la cedula del " + sp_query + " " + ex.Message);
-            }
-        }
-
-        public DataTable ObtenerPorID(string sp_query) {
-
-            try
-            {
-                List<ParametrosCreator> lista = new List<ParametrosCreator>();
-                return obj_bd.ExecuteSPQuery(sp_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error  al obtener tabla de " + sp_query + " " + ex.Message);
-            }
-        }
+       
 
         public bool CrearEntidad(string sp_Non_query,List<ParametrosCreator> lista)
         {
@@ -94,6 +70,7 @@ namespace ConsultorioPrivado.Datos.Interface
             {
                 throw new Exception("error al actualizar la entidad " + sp_Non_query + " " + ex.Message);
             }
+
         }
 
         public DataTable ObtenerPorCedula(string sp_query, List<ParametrosCreator> lista)
