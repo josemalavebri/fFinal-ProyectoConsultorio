@@ -26,10 +26,7 @@ namespace ConsultorioPrivado.Vista
         {
             
             InitializeComponent();
-            cedula_text.TextChanged += textBoxes_TextChanged;
-            nombre_text.TextChanged += textBoxes_TextChanged;
-            apellido_text.TextChanged += textBoxes_TextChanged;
-            correoText.TextChanged += textBoxes_TextChanged;
+           
             controlador = new ControladorMedico();
             Button_ControlForms.DesabilitarBotones(resetear_button);
             this.id = id;

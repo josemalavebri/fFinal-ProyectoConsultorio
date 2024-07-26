@@ -1,4 +1,5 @@
-﻿using ConsultorioPrivado.Vista.Paciente;
+﻿using ConsultorioPrivado.Controlador.Controlers;
+using ConsultorioPrivado.Vista.Paciente;
 using Modelo;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,12 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 {
     public partial class Cita_form : Form
     {
+
+        ControladorCita controladorCita;
         public Cita_form()
         {
             InitializeComponent();
-           
+            controladorCita = new ControladorCita();
         }
 
         private void nuevo_button_Click(object sender, EventArgs e)
@@ -30,7 +33,9 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private void Cita_form_Load(object sender, EventArgs e)
         {
-            DGVDisenio.Formato(citas_dgv, 1);
+            citas_dgv.DataSource = controladorCita.ObtenerPorCita();
+            DGVDisenio.Formato(citas_dgv);
+
         }
     }
 }

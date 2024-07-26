@@ -1,6 +1,5 @@
 ﻿using ConsultorioPrivado.Controlador.Controlers;
 using ConsultorioPrivado.Utilidad.Forms;
-using ConsultorioPrivado.Vista.Paciente_forms;
 using Modelo;
 using System;
 using System.Collections.Generic;
@@ -52,7 +51,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         }
         private void nuevo_button_Click(object sender, EventArgs e)
         {
-            Form form = new add_Paciente_form(false);
+            Form form = new Gestion_Paciente_form(false);
             form.ShowDialog();
             CargarDataGrid();
         }
@@ -70,7 +69,7 @@ namespace ConsultorioPrivado.Vista.Paciente
             {
                 int idPaciente = Convert.ToInt32(paciente_dgv.CurrentRow.
                      Cells["id"].Value.ToString());
-                edit_Paciente_form editarPaciente = new edit_Paciente_form(idPaciente);
+                Gestion_Paciente_form editarPaciente = new Gestion_Paciente_form(true,idPaciente);
                 editarPaciente.ShowDialog();
                 CargarDataGrid();
             }
@@ -100,8 +99,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
             CargarDataGrid();
 
-            DGVDisenio.Formato(paciente_dgv, 1);
-
+            DGVDisenio.Formato(paciente_dgv);
         }
 
         private void buscar_button_Click(object sender, EventArgs e)

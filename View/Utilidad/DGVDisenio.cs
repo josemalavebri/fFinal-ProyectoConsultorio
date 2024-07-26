@@ -16,7 +16,7 @@ namespace Vista.Utilidad
 
 
         //Método para dar formato al DataGridView, recibimos dos paramateros uno tipo DataGrid y otro int para la selección del color.
-        public static void Formato(DataGridView pData, int color)
+        public static void Formato(DataGridView pData)
         { // Fuente para las filas
             pData.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
             // Fuente para las columnas
@@ -43,40 +43,37 @@ namespace Vista.Utilidad
             pData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
-            if (color == 1)
-            {
-                // Columna
-                pData.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(64, 64, 64);
-                // Fila
-                pData.RowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-                pData.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 192, 192);
-                pData.RowsDefaultCellStyle.SelectionForeColor = Color.Black;
-                pData.RowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
-                // Fila alternativa
-                pData.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(224, 224, 224);
-                pData.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 192, 192);
-                pData.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
-                pData.AlternatingRowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
+            // Columna
+            pData.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(64, 64, 64);
+            // Fila
+            pData.RowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+            pData.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 192, 192);
+            pData.RowsDefaultCellStyle.SelectionForeColor = Color.Black;
+            pData.RowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
+            // Fila alternativa
+            pData.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(224, 224, 224);
+            pData.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 192, 192);
+            pData.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
+            pData.AlternatingRowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
 
 
-                DataGridViewButtonColumn colEditar = new DataGridViewButtonColumn();
-                DataGridViewButtonColumn colEliminar = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn colEditar = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn colEliminar = new DataGridViewButtonColumn();
 
-                colEditar.Text = "Editar";
-                colEditar.Name = "Editar";
-                colEditar.UseColumnTextForButtonValue = true;
+            colEditar.Text = "Editar";
+            colEditar.Name = "Editar";
+            colEditar.UseColumnTextForButtonValue = true;
 
 
-                colEliminar.Text = "Eliminar";
-                colEliminar.Name = "Eliminar";
-                colEliminar.UseColumnTextForButtonValue = true;
+            colEliminar.Text = "Eliminar";
+            colEliminar.Name = "Eliminar";
+            colEliminar.UseColumnTextForButtonValue = true;
 
-                pData.Columns.Add(colEditar);
-                pData.Columns.Add(colEliminar);
+            pData.Columns.Add(colEditar);
+            pData.Columns.Add(colEliminar);
 
-                columnasIniciadas = true;
+            columnasIniciadas = true;
 
-            }
 
         }
     }

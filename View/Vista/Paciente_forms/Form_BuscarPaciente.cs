@@ -1,7 +1,6 @@
 ﻿using ConsultorioPrivado.Controlador.Controlers;
 using ConsultorioPrivado.Utilidad.Forms;
 using ConsultorioPrivado.Vista.Cita_Form;
-using ConsultorioPrivado.Vista.Paciente_forms;
 using Modelo;
 using System;
 using System.Collections.Generic;
@@ -18,18 +17,18 @@ namespace ConsultorioPrivado.Vista.Paciente
     public partial class Form_BuscarPaciente : Form
     {
         private Pacientes paciente;
-        private ControladorPaciente controlador;
+        private ControladorPaciente controladorPaciente;
 
         public Form_BuscarPaciente()
         {
-            controlador = new ControladorPaciente();
+            controladorPaciente = new ControladorPaciente();
             InitializeComponent();
             paciente = new Pacientes();
         }
 
         private void CargarDataGrid()
         {
-            dgv_paciente.DataSource = controlador.ObtenerPorPaciente();
+            dgv_paciente.DataSource = controladorPaciente.ObtenerPorPaciente();
         }
 
         private DialogResult MostrarMensaje()
@@ -45,7 +44,11 @@ namespace ConsultorioPrivado.Vista.Paciente
         private void resetear_button_Click(object sender, EventArgs e)
         {
             Text_ControlForms.EliminarTextos(cedula_text);
+            btn_guardar.Enabled = false;
+            txt_pacienteSelec.Text = string.Empty;
+            CargarDataGrid();
         }
+
 
         private void dgv_paciente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -61,6 +64,7 @@ namespace ConsultorioPrivado.Vista.Paciente
                 paciente.Telefono = Convert.ToInt32(row.Cells["Telefono"].Value);
             }
             txt_pacienteSelec.Text = paciente.ToString();
+            btn_guardar.Enabled = true;
 
         }
 
@@ -73,7 +77,15 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         private void Form_BuscarPaciente_Load(object sender, EventArgs e)
         {
+            Button_ControlForms.DesabilitarBotones(btn_guardar);
             CargarDataGrid();
+        }
+
+        private void buscar_button_Click(object sender, EventArgs e)
+        {
+            paciente.Cedula = Convert.ToInt32(cedula_text.Text.ToString());
+            dgv_paciente.DataSource = controladorPaciente.ObtenerPorCedula(paciente);
+
         }
     }
 }

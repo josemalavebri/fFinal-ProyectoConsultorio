@@ -14,12 +14,20 @@ using ConsultorioPrivado.Vista.Cita_Form;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
-    public partial class add_Paciente_form : Form
+    public partial class Gestion_Paciente_form : Form
     {
         private ControladorPaciente controladorPaciente;
+        private bool boolEdit;
         private bool boolCita;
+        private int pacienteId;
 
-        public add_Paciente_form(bool boolCita)
+        public Gestion_Paciente_form()
+        {
+            InitializeComponent();
+            controladorPaciente = new ControladorPaciente();
+            this.boolEdit = false;
+        }
+        public Gestion_Paciente_form(bool boolCita)
         {
             InitializeComponent();
             controladorPaciente = new ControladorPaciente();
@@ -27,9 +35,19 @@ namespace ConsultorioPrivado.Vista.Paciente
         }
 
 
+        public Gestion_Paciente_form(bool boolEdit, int pacienteId)
+        {
+            InitializeComponent();
+            controladorPaciente = new ControladorPaciente();
+            this.boolEdit = boolEdit;
+            this.pacienteId = pacienteId;
+        }
+
+
         private Pacientes crearPacienteEntidad()
         {
-            Modelo.Pacientes paciente = new Pacientes();
+            Pacientes paciente = new Pacientes();
+            paciente.Id = this.pacienteId;
             paciente.Cedula = Convert.ToInt32(cedula_textBox.Text.ToString());
             paciente.Edad = Convert.ToInt32(txt_edad.Text.ToString());
             paciente.Nombre = nombre_textBox.Text.ToString();
@@ -39,12 +57,31 @@ namespace ConsultorioPrivado.Vista.Paciente
             return paciente;
         }
 
+        private void agregarDatosFormularios()
+        {
+
+            Pacientes pacientes = new Pacientes();
+            pacientes.Id = pacienteId;
+            DataTable datosPaciente = controladorPaciente.ObtenerPorId(pacientes);
+            if (datosPaciente.Rows.Count > 0)
+            {
+                DataRow row = datosPaciente.Rows[0];
+                nombre_textBox.Text = row["nombre"].ToString();
+                txt_edad.Text = row["edad"].ToString();
+                apellido_textBox.Text = row["apellido"].ToString();
+                cedula_textBox.Text = row["cedula"].ToString();
+                telefono_textBox.Text = row["telefono"].ToString();
+                correo_textBox.Text = row["correo"].ToString();
+            }
+
+
+        }
+
 
         private void HabilitarEventoReset()
         {
             Reset_ControlForms.Evento_HabilitarReset(resetear_button, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
         }
-
         
 
         private void add_Paciente_form_Load(object sender, EventArgs e)
@@ -52,6 +89,11 @@ namespace ConsultorioPrivado.Vista.Paciente
             cedula_textBox.Focus();
             Button_ControlForms.DesabilitarBotones(resetear_button);
             HabilitarEventoReset();
+            if (boolEdit)
+            {
+                agregarDatosFormularios();
+            }
+
         }
 
         private void cancelar_button_Click(object sender, EventArgs e)
@@ -62,11 +104,17 @@ namespace ConsultorioPrivado.Vista.Paciente
         private void agregar_button_Click(object sender, EventArgs e)
         {
             Pacientes paciente = crearPacienteEntidad();
+            if (boolEdit)
+            {
+                controladorPaciente.ActualizarPaciente(paciente);
+            }
+
             if (controladorPaciente.CrearPaciente(paciente))
             {
                 MessageBox.Show("Paciente creado con exito");
                 this.Close();
             }
+
             if (boolCita)
             {
                 Form form = new Agregar_Cita_Form(paciente);
@@ -81,6 +129,7 @@ namespace ConsultorioPrivado.Vista.Paciente
             vaciarText();
             resetear_button.Enabled = false;
         }
+
         private void vaciarText()
         {
             Text_ControlForms.EliminarTextos(cedula_textBox,txt_edad, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);

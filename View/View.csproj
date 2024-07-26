@@ -32,10 +32,7 @@
     <Compile Update="Vista\Medico_forms\Medico_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vista\Paciente_forms\add_Paciente_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vista\Paciente_forms\edit_Paciente_form.cs">
+    <Compile Update="Vista\Paciente_forms\Gestion_Paciente_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\Paciente_forms\Paciente_form.cs">

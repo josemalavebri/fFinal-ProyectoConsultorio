@@ -160,7 +160,7 @@
             especialidad_combo.Items.AddRange(new object[] { "Cardiologia", "Dermatologia", "Pediatria" });
             especialidad_combo.Location = new Point(138, 101);
             especialidad_combo.Name = "especialidad_combo";
-            especialidad_combo.Size = new Size(121, 23);
+            especialidad_combo.Size = new Size(124, 23);
             especialidad_combo.TabIndex = 13;
             // 
             // cancelar_button

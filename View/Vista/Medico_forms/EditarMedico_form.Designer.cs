@@ -50,7 +50,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(27, 44);
+            label1.Location = new Point(27, 49);
             label1.Name = "label1";
             label1.Size = new Size(51, 15);
             label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 83);
+            label2.Location = new Point(28, 94);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
             label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 168);
+            label3.Location = new Point(27, 173);
             label3.Name = "label3";
             label3.Size = new Size(44, 15);
             label3.TabIndex = 2;
@@ -77,7 +77,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(27, 209);
+            label4.Location = new Point(27, 214);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 3;
@@ -85,35 +85,35 @@
             // 
             // nombre_text
             // 
-            nombre_text.Location = new Point(132, 44);
+            nombre_text.Location = new Point(132, 49);
             nombre_text.Name = "nombre_text";
             nombre_text.Size = new Size(100, 23);
             nombre_text.TabIndex = 4;
             // 
             // apellido_text
             // 
-            apellido_text.Location = new Point(132, 83);
+            apellido_text.Location = new Point(132, 91);
             apellido_text.Name = "apellido_text";
             apellido_text.Size = new Size(100, 23);
             apellido_text.TabIndex = 5;
             // 
             // cedula_text
             // 
-            cedula_text.Location = new Point(132, 168);
+            cedula_text.Location = new Point(132, 173);
             cedula_text.Name = "cedula_text";
             cedula_text.Size = new Size(100, 23);
             cedula_text.TabIndex = 6;
             // 
             // correoText
             // 
-            correoText.Location = new Point(132, 209);
+            correoText.Location = new Point(132, 214);
             correoText.Name = "correoText";
             correoText.Size = new Size(100, 23);
             correoText.TabIndex = 7;
             // 
             // agregar_button
             // 
-            agregar_button.Location = new Point(47, 303);
+            agregar_button.Location = new Point(47, 308);
             agregar_button.Name = "agregar_button";
             agregar_button.Size = new Size(75, 23);
             agregar_button.TabIndex = 8;
@@ -123,7 +123,7 @@
             // 
             // resetear_button
             // 
-            resetear_button.Location = new Point(153, 303);
+            resetear_button.Location = new Point(153, 308);
             resetear_button.Name = "resetear_button";
             resetear_button.Size = new Size(75, 23);
             resetear_button.TabIndex = 9;
@@ -133,7 +133,7 @@
             // 
             // telefono_text
             // 
-            telefono_text.Location = new Point(132, 251);
+            telefono_text.Location = new Point(132, 256);
             telefono_text.Name = "telefono_text";
             telefono_text.Size = new Size(100, 23);
             telefono_text.TabIndex = 11;
@@ -141,7 +141,7 @@
             // telefono_label
             // 
             telefono_label.AutoSize = true;
-            telefono_label.Location = new Point(27, 251);
+            telefono_label.Location = new Point(27, 256);
             telefono_label.Name = "telefono_label";
             telefono_label.Size = new Size(52, 15);
             telefono_label.TabIndex = 10;
@@ -150,7 +150,7 @@
             // especialidad
             // 
             especialidad.AutoSize = true;
-            especialidad.Location = new Point(27, 127);
+            especialidad.Location = new Point(27, 132);
             especialidad.Name = "especialidad";
             especialidad.Size = new Size(72, 15);
             especialidad.TabIndex = 12;
@@ -160,7 +160,7 @@
             // 
             especialidad_combo.FormattingEnabled = true;
             especialidad_combo.Items.AddRange(new object[] { "Cardiologia", "Dermatologia", "Pediatria" });
-            especialidad_combo.Location = new Point(132, 130);
+            especialidad_combo.Location = new Point(132, 135);
             especialidad_combo.Name = "especialidad_combo";
             especialidad_combo.Size = new Size(121, 23);
             especialidad_combo.TabIndex = 13;

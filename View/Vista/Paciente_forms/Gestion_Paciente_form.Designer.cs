@@ -1,6 +1,6 @@
 ﻿namespace ConsultorioPrivado.Vista.Paciente
 {
-    partial class add_Paciente_form
+    partial class Gestion_Paciente_form
     {
         /// <summary>
         /// Required designer variable.
@@ -171,7 +171,7 @@
             label5.TabIndex = 30;
             label5.Text = "Edad";
             // 
-            // add_Paciente_form
+            // Gestion_Paciente_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -192,7 +192,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "add_Paciente_form";
+            Name = "Gestion_Paciente_form";
             Text = "Añadir Paciente";
             Load += add_Paciente_form_Load;
             ResumeLayout(false);
