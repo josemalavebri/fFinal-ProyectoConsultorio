@@ -26,14 +26,12 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private bool nuevoPaciente;
         private List<Pacientes> listaPacientes;
         private List<Medico> listaMedico;
-
-
         //CONTROLADORES
         private ControladorCita controladorCita;
         private ControladorTurno controladorTurno;
         private ControladorMedico controladorMedico;
-
-
+        private ControladorPaciente controladorPaciente;
+        private int pacienteId;
 
         public Agregar_Cita_Form(Pacientes paciente)
         {
@@ -49,6 +47,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             this.paciente = paciente;
 
             this.nuevoPaciente = nuevoPaciente;
+            controladorPaciente = new ControladorPaciente();
         }
 
         private void Agregar_Cita_Form_Load(object sender, EventArgs e)
@@ -61,10 +60,19 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private void CargarGrid()
         {
             combo_Pacientes.DataSource = listaPacientes;
-            listaMedico = new List<Medico>();
-            DataTable dataTable = controladorMedico.ObtenerPorMedico();
+            DataTable dataTablePaciente = controladorPaciente.ObtenerPorCedula(paciente);
 
-            foreach (DataRow row in dataTable.Rows)
+            foreach (DataRow row in dataTablePaciente.Rows)
+            {
+                this.pacienteId = Convert.ToInt32(row["Id"]);
+                break;
+            }
+
+
+            listaMedico = new List<Medico>();
+            DataTable dataTableMedico = controladorMedico.ObtenerPorMedico();
+
+            foreach (DataRow row in dataTableMedico.Rows)
             {
                 var medico = new Medico
                 {
@@ -73,7 +81,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                     Apellido = row["Apellido"].ToString(),
                     Especialidad_id = Convert.ToInt32(row["idEspecialidadFk"].ToString())
                 };
-
+                
                 listaMedico.Add(medico);
             }
             combo_Medicos.DataSource = listaMedico;
@@ -104,7 +112,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private CitaMedica CrearObjetoCitaMedica()
         {
-            citaMedica.IdPaciente = paciente.Id;
+            citaMedica.IdPaciente = this.pacienteId;
             citaMedica.Descripcion = description_text.Text;
             citaMedica.IdMedicoTurno = idTurno;
             return citaMedica;

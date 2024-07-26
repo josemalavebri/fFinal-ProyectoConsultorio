@@ -62,7 +62,7 @@ namespace ConsultorioPrivado.Vista.Paciente
 
             Pacientes pacientes = new Pacientes();
             pacientes.Id = pacienteId;
-            DataTable datosPaciente = controladorPaciente.ObtenerPorId(pacientes);
+            DataTable datosPaciente = controladorPaciente.ObtenerPacientePorId(pacientes);
             if (datosPaciente.Rows.Count > 0)
             {
                 DataRow row = datosPaciente.Rows[0];

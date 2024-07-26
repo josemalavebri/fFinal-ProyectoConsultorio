@@ -21,12 +21,14 @@ namespace ConsultorioPrivado.Controlador.Controlers
         public DataTable ObtenerPorPaciente()
         {
             return controladorCreator.ObtenerEntidad(E_ROL._PACIENTE);
+        } 
+
+
+        public DataTable ObtenerPacientePorId<T>(T entidad) where T : IEntidad
+        {
+            return controladorCreator.ObtenerPorId(entidad, E_ROL._PACIENTE);
         }
 
-        public DataTable ObtenerPorId<T>(T entidad) where T : IEntidad
-        {
-            return controladorCreator.ObtenerPorId(entidad,E_ROL._PACIENTE);
-        }
 
         public DataTable ObtenerPorCedula<T>(T entidad) where T : IEntidad
         {
