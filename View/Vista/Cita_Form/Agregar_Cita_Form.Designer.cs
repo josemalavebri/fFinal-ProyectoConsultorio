@@ -43,6 +43,8 @@
             turnos_dgv = new DataGridView();
             label2 = new Label();
             label3 = new Label();
+            txt_turnoFecha = new TextBox();
+            txt_turnoHora = new TextBox();
             GBx_Cita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PBx_Close).BeginInit();
             ((System.ComponentModel.ISupportInitialize)turnos_dgv).BeginInit();
@@ -50,7 +52,7 @@
             // 
             // cancelar_button
             // 
-            cancelar_button.Location = new Point(397, 38);
+            cancelar_button.Location = new Point(397, 69);
             cancelar_button.Name = "cancelar_button";
             cancelar_button.Size = new Size(93, 38);
             cancelar_button.TabIndex = 31;
@@ -60,7 +62,7 @@
             // 
             // resetear_button
             // 
-            resetear_button.Location = new Point(397, 185);
+            resetear_button.Location = new Point(397, 138);
             resetear_button.Name = "resetear_button";
             resetear_button.Size = new Size(93, 38);
             resetear_button.TabIndex = 26;
@@ -70,7 +72,7 @@
             // 
             // agregar_button
             // 
-            agregar_button.Location = new Point(397, 107);
+            agregar_button.Location = new Point(370, 500);
             agregar_button.Name = "agregar_button";
             agregar_button.Size = new Size(93, 38);
             agregar_button.TabIndex = 25;
@@ -158,7 +160,7 @@
             // 
             PBx_Close.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             PBx_Close.Image = (Image)resources.GetObject("PBx_Close.Image");
-            PBx_Close.Location = new Point(507, 0);
+            PBx_Close.Location = new Point(510, 0);
             PBx_Close.Margin = new Padding(3, 2, 3, 2);
             PBx_Close.Name = "PBx_Close";
             PBx_Close.Size = new Size(24, 21);
@@ -174,7 +176,7 @@
             turnos_dgv.Name = "turnos_dgv";
             turnos_dgv.Size = new Size(478, 228);
             turnos_dgv.TabIndex = 37;
-            turnos_dgv.CellClick += turnos_dgv_CellClick;
+            turnos_dgv.CellContentClick += turnos_dgv_CellContentClick;
             // 
             // label2
             // 
@@ -188,18 +190,34 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(347, 225);
+            label3.Location = new Point(17, 507);
             label3.Name = "label3";
-            label3.Size = new Size(28, 15);
+            label3.Size = new Size(38, 15);
             label3.TabIndex = 39;
-            label3.Text = "0:00";
+            label3.Text = "Turno";
+            // 
+            // txt_turnoFecha
+            // 
+            txt_turnoFecha.Location = new Point(75, 499);
+            txt_turnoFecha.Name = "txt_turnoFecha";
+            txt_turnoFecha.Size = new Size(89, 23);
+            txt_turnoFecha.TabIndex = 40;
+            // 
+            // txt_turnoHora
+            // 
+            txt_turnoHora.Location = new Point(188, 500);
+            txt_turnoHora.Name = "txt_turnoHora";
+            txt_turnoHora.Size = new Size(81, 23);
+            txt_turnoHora.TabIndex = 41;
             // 
             // Agregar_Cita_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(532, 507);
+            ClientSize = new Size(535, 574);
+            Controls.Add(txt_turnoHora);
+            Controls.Add(txt_turnoFecha);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(turnos_dgv);
@@ -237,5 +255,7 @@
         private DataGridView turnos_dgv;
         private Label label2;
         private Label label3;
+        private TextBox txt_turnoFecha;
+        private TextBox txt_turnoHora;
     }
 }

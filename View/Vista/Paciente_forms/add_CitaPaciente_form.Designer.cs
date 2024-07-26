@@ -41,11 +41,13 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            label5 = new Label();
+            txt_edad = new TextBox();
             SuspendLayout();
             // 
             // cancelar_button
             // 
-            cancelar_button.Location = new Point(99, 265);
+            cancelar_button.Location = new Point(99, 286);
             cancelar_button.Name = "cancelar_button";
             cancelar_button.Size = new Size(75, 23);
             cancelar_button.TabIndex = 29;
@@ -55,7 +57,7 @@
             // 
             // telefono_textBox
             // 
-            telefono_textBox.Location = new Point(131, 174);
+            telefono_textBox.Location = new Point(131, 195);
             telefono_textBox.Name = "telefono_textBox";
             telefono_textBox.Size = new Size(100, 23);
             telefono_textBox.TabIndex = 26;
@@ -63,7 +65,7 @@
             // telefono_label
             // 
             telefono_label.AutoSize = true;
-            telefono_label.Location = new Point(26, 174);
+            telefono_label.Location = new Point(26, 195);
             telefono_label.Name = "telefono_label";
             telefono_label.Size = new Size(52, 15);
             telefono_label.TabIndex = 25;
@@ -71,16 +73,17 @@
             // 
             // resetear_button
             // 
-            resetear_button.Location = new Point(142, 226);
+            resetear_button.Location = new Point(142, 247);
             resetear_button.Name = "resetear_button";
             resetear_button.Size = new Size(75, 23);
             resetear_button.TabIndex = 24;
             resetear_button.Text = "Resetear";
             resetear_button.UseVisualStyleBackColor = true;
+            resetear_button.Click += resetear_button_Click;
             // 
             // agregar_button
             // 
-            agregar_button.Location = new Point(40, 226);
+            agregar_button.Location = new Point(40, 247);
             agregar_button.Name = "agregar_button";
             agregar_button.Size = new Size(75, 23);
             agregar_button.TabIndex = 23;
@@ -90,21 +93,21 @@
             // 
             // correo_textBox
             // 
-            correo_textBox.Location = new Point(131, 132);
+            correo_textBox.Location = new Point(131, 153);
             correo_textBox.Name = "correo_textBox";
             correo_textBox.Size = new Size(100, 23);
             correo_textBox.TabIndex = 22;
             // 
             // cedula_textBox
             // 
-            cedula_textBox.Location = new Point(131, 98);
+            cedula_textBox.Location = new Point(131, 119);
             cedula_textBox.Name = "cedula_textBox";
             cedula_textBox.Size = new Size(100, 23);
             cedula_textBox.TabIndex = 21;
             // 
             // apellido_textBox
             // 
-            apellido_textBox.Location = new Point(131, 65);
+            apellido_textBox.Location = new Point(131, 86);
             apellido_textBox.Name = "apellido_textBox";
             apellido_textBox.Size = new Size(100, 23);
             apellido_textBox.TabIndex = 20;
@@ -119,7 +122,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(26, 132);
+            label4.Location = new Point(26, 153);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 18;
@@ -128,7 +131,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(26, 98);
+            label3.Location = new Point(26, 119);
             label3.Name = "label3";
             label3.Size = new Size(44, 15);
             label3.TabIndex = 17;
@@ -137,7 +140,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(26, 65);
+            label2.Location = new Point(26, 86);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
             label2.TabIndex = 16;
@@ -152,11 +155,29 @@
             label1.TabIndex = 15;
             label1.Text = "Nombre";
             // 
-            // add_Paciente_form
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(33, 54);
+            label5.Name = "label5";
+            label5.Size = new Size(33, 15);
+            label5.TabIndex = 30;
+            label5.Text = "Edad";
+            // 
+            // txt_edad
+            // 
+            txt_edad.Location = new Point(131, 57);
+            txt_edad.Name = "txt_edad";
+            txt_edad.Size = new Size(100, 23);
+            txt_edad.TabIndex = 31;
+            // 
+            // add_CitaPaciente_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(249, 331);
+            Controls.Add(txt_edad);
+            Controls.Add(label5);
             Controls.Add(cancelar_button);
             Controls.Add(telefono_textBox);
             Controls.Add(telefono_label);
@@ -171,7 +192,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "add_Paciente_form";
+            Name = "add_CitaPaciente_form";
             Text = "Añadir Paciente";
             Load += add_Paciente_form_Load;
             ResumeLayout(false);
@@ -193,5 +214,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Label label5;
+        private TextBox txt_edad;
     }
 }

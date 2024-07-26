@@ -137,6 +137,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form_BuscarPaciente";
             Text = "Pacientes";
+            Load += Form_BuscarPaciente_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_paciente).EndInit();
             ResumeLayout(false);
             PerformLayout();

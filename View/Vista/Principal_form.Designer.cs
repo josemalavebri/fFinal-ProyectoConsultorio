@@ -34,8 +34,8 @@
             agendarCitas_button = new Button();
             pacientes_button = new Button();
             medicos_Button = new Button();
-            principal_panel = new Panel();
             btn_turnos = new Button();
+            principal_panel = new Panel();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -92,13 +92,6 @@
             medicos_Button.UseVisualStyleBackColor = true;
             medicos_Button.Click += medicos_Button_Click;
             // 
-            // principal_panel
-            // 
-            principal_panel.Location = new Point(114, 29);
-            principal_panel.Name = "principal_panel";
-            principal_panel.Size = new Size(874, 420);
-            principal_panel.TabIndex = 1;
-            // 
             // btn_turnos
             // 
             btn_turnos.Location = new Point(3, 247);
@@ -107,6 +100,13 @@
             btn_turnos.TabIndex = 5;
             btn_turnos.Text = "Turnos";
             btn_turnos.UseVisualStyleBackColor = true;
+            // 
+            // principal_panel
+            // 
+            principal_panel.Location = new Point(114, 29);
+            principal_panel.Name = "principal_panel";
+            principal_panel.Size = new Size(874, 420);
+            principal_panel.TabIndex = 1;
             // 
             // Principal_form
             // 

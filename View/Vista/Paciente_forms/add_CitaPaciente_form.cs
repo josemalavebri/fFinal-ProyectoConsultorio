@@ -23,7 +23,7 @@ namespace ConsultorioPrivado.Vista.Paciente
             InitializeComponent();
             paciente = new Pacientes();
         }
-       
+
         /*private void resetearButtonEstado(bool estado)
         {
             Button_ControlForms.desabilitarHabilitarBotones(estado, resetear_button);
@@ -34,7 +34,7 @@ namespace ConsultorioPrivado.Vista.Paciente
 
 
         private Pacientes crearPacienteEntidad()
-        { 
+        {
             paciente.Cedula = Convert.ToInt32(cedula_textBox.Text.ToString());
             paciente.Nombre = nombre_textBox.Text.ToString();
             paciente.Apellido = apellido_textBox.Text.ToString();
@@ -54,7 +54,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         }
         private void vaciarText()
         {
-            Text_ControlForms.EliminarTextos(cedula_textBox, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
+            Text_ControlForms.EliminarTextos(cedula_textBox,txt_edad, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
         }
 
         private void add_Paciente_form_Load(object sender, EventArgs e)
@@ -70,9 +70,15 @@ namespace ConsultorioPrivado.Vista.Paciente
         private void agregar_button_Click(object sender, EventArgs e)
         {
             crearPacienteEntidad();
+            //INSERTAR EN LA BASE DE DATOS
             Form form = new Agregar_Cita_Form(paciente);
             form.ShowDialog();
             this.Close();
+        }
+
+        private void resetear_button_Click(object sender, EventArgs e)
+        {
+            vaciarText();
         }
     }
 }

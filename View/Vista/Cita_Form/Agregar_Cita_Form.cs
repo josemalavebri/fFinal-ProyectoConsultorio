@@ -21,7 +21,8 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private CitaMedica citaMedica;
         private Medico medicoActual;
         private int idTurno;
-        private MedicoTurno medicoTurno;
+        //private MedicoTurno medicoTurno;
+
         private bool nuevoPaciente;
         private List<Pacientes> listaPacientes;
         private List<Medico> listaMedico;
@@ -39,11 +40,12 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             listaPacientes = new List<Pacientes>();
             listaPacientes.Clear();
             listaPacientes.Add(paciente);
+
             InitializeComponent();
             controladorTurno = new ControladorTurno();
             controladorCita = new ControladorCita();
             controladorMedico = new ControladorMedico();
-                       citaMedica = new CitaMedica();
+            citaMedica = new CitaMedica();
             this.paciente = paciente;
 
             this.nuevoPaciente = nuevoPaciente;
@@ -59,8 +61,9 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private void CargarGrid()
         {
             combo_Pacientes.DataSource = listaPacientes;
-            var listaDeMedicos = new List<Medico>();
+            listaMedico = new List<Medico>();
             DataTable dataTable = controladorMedico.ObtenerPorMedico();
+
             foreach (DataRow row in dataTable.Rows)
             {
                 var medico = new Medico
@@ -71,9 +74,9 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                     Especialidad_id = Convert.ToInt32(row["idEspecialidadFk"].ToString())
                 };
 
-                listaDeMedicos.Add(medico);
+                listaMedico.Add(medico);
             }
-            combo_Medicos.DataSource = listaDeMedicos;
+            combo_Medicos.DataSource = listaMedico;
 
 
         }
@@ -106,6 +109,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             citaMedica.IdMedicoTurno = idTurno;
             return citaMedica;
         }
+
         private void combo_Pacientes_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             paciente = (Pacientes)combo_Pacientes.SelectedItem;
@@ -113,24 +117,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private void combo_Medicos_SelectedIndexChanged(object sender, EventArgs e)
         {
             medicoActual = (Medico)combo_Medicos.SelectedItem;
-            MessageBox.Show("medico" + medicoActual.Especialidad_id+"  "+ medicoActual.ToString());
             turnos_dgv.DataSource = controladorTurno.ObtenerPorEspecialidad(medicoActual);
-
-            /*
-            if (combo_Medicos.SelectedItem != null)
-            {
-                DataRowView selectedRow = combo_Medicos.SelectedItem as DataRowView;
-
-                if (selectedRow != null)
-                {
-                    medicoActual.Especialidad_id = Convert.ToInt32(selectedRow["Especialidad_id"]);
-                    int medicoId = Convert.ToInt32(selectedRow["Id"]);
-
-                    MessageBox.Show("ID OBTENIDO CON EXITO" + medicoId);
-                }
-            }
-            turnos_dgv.DataSource = controladorTurno.ObtenerPorEspecialidad(medicoActual);
-            */
         }
 
 
@@ -144,15 +131,12 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             Button_ControlForms.HabilitarBotones(agregar_button, cancelar_button);
             Button_ControlForms.DesabilitarBotones(cancelar_button);
             Text_ControlForms.EliminarTextos(description_text);
-
         }
 
         private void cancelar_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
 
         private void PBx_Close_Click(object sender, EventArgs e)
         {
@@ -164,14 +148,19 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         }
 
-        private void turnos_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+    
+
+        private void turnos_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow selectedRow = turnos_dgv.Rows[e.RowIndex];
-                idTurno = Convert.ToInt32(selectedRow.Cells["TurnoId"].Value);
-                MessageBox.Show("ID del Turno seleccionado: " + idTurno);
+                DataGridViewRow row = turnos_dgv.Rows[e.RowIndex];
+                idTurno = Convert.ToInt32(row.Cells["id"].Value.ToString());
+                txt_turnoFecha.Text =  row.Cells["fecha"].Value.ToString().Substring(0,10);
+                txt_turnoHora.Text = row.Cells["Hora"].Value.ToString() + ":" +
+                    row.Cells["minuto"].Value.ToString();
             }
+
         }
     }
 }

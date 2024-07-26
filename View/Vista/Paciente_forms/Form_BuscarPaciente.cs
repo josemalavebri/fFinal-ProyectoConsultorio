@@ -24,6 +24,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
             controlador = new ControladorPaciente();
             InitializeComponent();
+            paciente = new Pacientes();
         }
 
         private void CargarDataGrid()
@@ -51,12 +52,15 @@ namespace ConsultorioPrivado.Vista.Paciente
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgv_paciente.Rows[e.RowIndex];
-                paciente.Id = Convert.ToInt32(row.Cells["Id"].Value);
+                paciente.Id = Convert.ToInt32(row.Cells["id"].Value);
                 paciente.Nombre = row.Cells["Nombre"].Value.ToString();
-                paciente.Edad = Convert.ToInt32(row.Cells["Edad"].Value);
+                paciente.Apellido = row.Cells["Apellido"].Value.ToString();
+
+                // paciente.Edad = Convert.ToInt32(row.Cells["Edad"].Value);
                 paciente.Correo = row.Cells["Correo"].Value.ToString();
                 paciente.Telefono = Convert.ToInt32(row.Cells["Telefono"].Value);
             }
+            txt_pacienteSelec.Text = paciente.ToString();
 
         }
 
@@ -65,6 +69,11 @@ namespace ConsultorioPrivado.Vista.Paciente
             Form form = new Agregar_Cita_Form(paciente);
             form.ShowDialog();
             this.Close();
+        }
+
+        private void Form_BuscarPaciente_Load(object sender, EventArgs e)
+        {
+            CargarDataGrid();
         }
     }
 }
