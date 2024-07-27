@@ -17,12 +17,14 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 {
     public partial class Cita_form : Form
     {
-
-        ControladorCita controladorCita;
+        private CitaMedica citaMedica;
+        private ControladorCita controladorCita;
         public Cita_form()
         {
             InitializeComponent();
             controladorCita = new ControladorCita();
+            citaMedica = new CitaMedica();
+
         }
 
         private void nuevo_button_Click(object sender, EventArgs e)
@@ -33,9 +35,43 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private void Cita_form_Load(object sender, EventArgs e)
         {
+            CargarDataGrid();
+
+            DGVDisenio.Formato(citas_dgv, false, true);
+        }
+
+        private void CargarDataGrid()
+        {
             citas_dgv.DataSource = controladorCita.ObtenerPorCita();
-            DGVDisenio.Formato(citas_dgv, false);
+        }
+
+        private void citas_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            if (citas_dgv.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                int id = Convert.ToInt32(citas_dgv.CurrentRow.Cells["Id"].Value.ToString()); ;
+                citaMedica.Id = id;
+                DialogResult result = MostrarMensaje();
+                if (result == DialogResult.OK)
+                {
+                    controladorCita.EliminarCita(citaMedica);
+                    CargarDataGrid();
+                }
+            }
 
         }
+
+        private DialogResult MostrarMensaje()
+        {
+            DialogResult result = MessageBox.Show(
+                "Desea eliminar?\nSe eliminará de forma permanente",
+                   "Confirmación",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Question);
+            return result;
+        }
     }
+
+   
 }

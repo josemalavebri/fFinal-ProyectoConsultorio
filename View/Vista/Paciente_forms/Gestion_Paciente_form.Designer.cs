@@ -175,7 +175,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(249, 331);
+            BackColor = Color.White;
+            ClientSize = new Size(243, 331);
             Controls.Add(txt_edad);
             Controls.Add(label5);
             Controls.Add(cancelar_button);

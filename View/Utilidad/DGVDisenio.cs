@@ -15,7 +15,7 @@ namespace Vista.Utilidad
 
         //Método para dar formato al DataGridView, recibimos dos paramateros uno tipo DataGrid y otro int para la selección del color.
         
-        public static void Formato(DataGridView pData, bool editar)
+        public static void Formato(DataGridView pData, bool editar,bool eliminar)
         { // Fuente para las filas
             pData.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
             // Fuente para las columnas
@@ -55,25 +55,51 @@ namespace Vista.Utilidad
             pData.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
             pData.AlternatingRowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
 
+
+            OcultarColumnaId(pData);
             if (editar)
             {
-                DataGridViewButtonColumn colEditar = new DataGridViewButtonColumn();
-                DataGridViewButtonColumn colEliminar = new DataGridViewButtonColumn();
-
-                colEditar.Text = "Editar";
-                colEditar.Name = "Editar";
-                colEditar.UseColumnTextForButtonValue = true;
-
-
-                colEliminar.Text = "Eliminar";
-                colEliminar.Name = "Eliminar";
-                colEliminar.UseColumnTextForButtonValue = true;
-
-                pData.Columns.Add(colEditar);
-                pData.Columns.Add(colEliminar);
-
+                AgregarColumnaEditar(pData);
                 columnasIniciadas = true;
+
             }
+            if (eliminar)
+            {
+                AgregarColumnaEliminar(pData);
+            }
+
+        }
+
+        private static void OcultarColumnaId(DataGridView pData)
+        {
+            if (pData.Columns["id"] !=null)
+            {
+                pData.Columns["id"].Visible = false;
+
+            }
+        }
+
+
+        private static void AgregarColumnaEliminar(DataGridView pData)
+        {
+            DataGridViewButtonColumn colEliminar = new DataGridViewButtonColumn();
+
+            colEliminar.Text = "Eliminar";
+            colEliminar.Name = "Eliminar";
+            colEliminar.UseColumnTextForButtonValue = true;
+
+            pData.Columns.Add(colEliminar);
+
+        }
+
+        private static void AgregarColumnaEditar(DataGridView pData)
+        {
+            DataGridViewButtonColumn colEditar = new DataGridViewButtonColumn();
+
+            colEditar.Text = "Editar";
+            colEditar.Name = "Editar";
+            colEditar.UseColumnTextForButtonValue = true;
+            pData.Columns.Add(colEditar);
 
         }
     }

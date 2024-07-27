@@ -52,11 +52,7 @@ C:\Users\josem\source\repos\Proyecto-Consultorio\View\bin\Debug\net8.0-windows\M
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\bin\Debug\net8.0-windows\Controller.pdb
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\bin\Debug\net8.0-windows\Model.pdb
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.csproj.AssemblyReference.cache
-C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\Vistas.Form1.resources
-C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Cita_Form.Agregar_Cita_Form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Cita_Form.Cita_form.resources
-C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.AgregarMedico_form.resources
-C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.EditarMedico_form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Medico_form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Paciente.Paciente_form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.csproj.GenerateResource.cache
@@ -77,3 +73,5 @@ C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\C
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Dispensario.Dispensario_Form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.Vista.Turnos.Form_Turno.resources
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Gestion_Medico_form.resources
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Cita_Form.Form_GestionCita.resources

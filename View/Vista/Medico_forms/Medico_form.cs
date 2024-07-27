@@ -97,8 +97,8 @@ namespace ConsultorioPrivado.Vista
             {
                 int idMedico = Convert.ToInt32(medicos_dgv.CurrentRow.
                      Cells["id"].Value.ToString());
-                EditarMedico_form editarMedico = new EditarMedico_form(idMedico);
-                editarMedico.ShowDialog();
+              //  EditarMedico_form editarMedico = new EditarMedico_form(idMedico);
+              //  editarMedico.ShowDialog();
                 CargarDataGrid();
             }
 

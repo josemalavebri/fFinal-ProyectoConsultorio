@@ -27,7 +27,7 @@ namespace View.Vista.Turnos
         {
 
             dgv_turnos.DataSource =  controladorTurno.ObtenerTurnos();
-            DGVDisenio.Formato(dgv_turnos, false);
+            DGVDisenio.Formato(dgv_turnos, false,false);
         }
     }
 }

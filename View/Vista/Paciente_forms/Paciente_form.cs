@@ -99,7 +99,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
             CargarDataGrid();
 
-            DGVDisenio.Formato(paciente_dgv,true);
+            DGVDisenio.Formato(paciente_dgv,true,true);
         }
 
         private void buscar_button_Click(object sender, EventArgs e)

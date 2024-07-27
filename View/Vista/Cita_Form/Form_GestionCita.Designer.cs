@@ -1,6 +1,6 @@
 ﻿namespace ConsultorioPrivado.Vista.Cita_Form
 {
-    partial class Agregar_Cita_Form
+    partial class Form_GestionCita
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Cita_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_GestionCita));
             cancelar_button = new Button();
             resetear_button = new Button();
             agregar_button = new Button();

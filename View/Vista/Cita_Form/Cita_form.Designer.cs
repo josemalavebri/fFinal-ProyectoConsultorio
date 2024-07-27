@@ -99,6 +99,7 @@
             citas_dgv.RowHeadersWidth = 51;
             citas_dgv.Size = new Size(851, 191);
             citas_dgv.TabIndex = 23;
+            citas_dgv.CellClick += citas_dgv_CellClick;
             // 
             // Cita_form
             // 

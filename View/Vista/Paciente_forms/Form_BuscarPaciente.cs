@@ -70,7 +70,7 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            Form form = new Agregar_Cita_Form(paciente);
+            Form form = new Form_GestionCita(paciente);
             form.ShowDialog();
             this.Close();
         }

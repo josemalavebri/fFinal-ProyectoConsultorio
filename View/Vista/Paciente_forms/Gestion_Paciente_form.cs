@@ -82,7 +82,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
             Reset_ControlForms.Evento_HabilitarReset(resetear_button, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
         }
-        
+
 
         private void add_Paciente_form_Load(object sender, EventArgs e)
         {
@@ -117,7 +117,7 @@ namespace ConsultorioPrivado.Vista.Paciente
 
             if (boolCita)
             {
-                Form form = new Agregar_Cita_Form(paciente);
+                Form form = new Form_GestionCita(paciente);
                 form.ShowDialog();
                 this.Close();
 
@@ -132,8 +132,13 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         private void vaciarText()
         {
-            Text_ControlForms.EliminarTextos(cedula_textBox,txt_edad, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
+            Text_ControlForms.EliminarTextos(cedula_textBox, txt_edad, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
             cedula_textBox.Focus();
+        }
+
+        private void btn_Aceptar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

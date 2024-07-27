@@ -14,41 +14,49 @@ using Modelo;
 
 namespace ConsultorioPrivado.Vista.Cita_Form
 {
-    public partial class Agregar_Cita_Form : Form
+    public partial class Form_GestionCita : Form
     {
         //Objetos
         private Pacientes paciente;
         private CitaMedica citaMedica;
         private Medico medicoActual;
+
+        //Variables
         private int idTurno;
         private int pacienteId;
 
-        private bool nuevoPaciente;
         private List<Pacientes> listaPacientes;
         private List<Medico> listaMedico;
-        
+
         //Controladores
         private ControladorCita controladorCita;
         private ControladorTurno controladorTurno;
         private ControladorMedico controladorMedico;
         private ControladorPaciente controladorPaciente;
 
-        public Agregar_Cita_Form(Pacientes paciente)
+        public Form_GestionCita(Pacientes paciente)
         {
+            Instanciador(paciente);
+        }
+
+        private void Instanciador(Pacientes paciente)
+        {
+            InitializeComponent();
+
             listaPacientes = new List<Pacientes>();
             listaPacientes.Clear();
             listaPacientes.Add(paciente);
+            citaMedica = new CitaMedica();
 
-            InitializeComponent();
             controladorTurno = new ControladorTurno();
             controladorCita = new ControladorCita();
             controladorMedico = new ControladorMedico();
-            citaMedica = new CitaMedica();
-            this.paciente = paciente;
-
-            this.nuevoPaciente = nuevoPaciente;
             controladorPaciente = new ControladorPaciente();
+
+            this.paciente = paciente;
         }
+
+
 
         private void Agregar_Cita_Form_Load(object sender, EventArgs e)
         {
@@ -85,9 +93,8 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                 listaMedico.Add(medico);
             }
             combo_Medicos.DataSource = listaMedico;
-
-
         }
+
 
         private void HabilitarEventoReset()
         {
