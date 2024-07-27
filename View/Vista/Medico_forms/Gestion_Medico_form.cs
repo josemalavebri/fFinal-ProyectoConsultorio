@@ -18,10 +18,10 @@ using TextBox = System.Windows.Forms.TextBox;
 
 namespace ConsultorioPrivado.Vista
 {
-    public partial class AgregarMedico_form : Form
+    public partial class Gestion_Medico_form : Form
     {
         ControladorMedico controlador;//ya la
-        public AgregarMedico_form()//ya la
+        public Gestion_Medico_form()//ya la
         {
             InitializeComponent();
             cedula_text.TextChanged += textBoxes_TextChanged;

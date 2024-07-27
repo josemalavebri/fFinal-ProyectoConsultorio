@@ -68,7 +68,7 @@ namespace ConsultorioPrivado.Vista
 
         private void nuevo_button_Click_1(object sender, EventArgs e)
         {
-            Form form = new AgregarMedico_form();
+            Form form = new Gestion_Medico_form();
             form.ShowDialog();
         }
 

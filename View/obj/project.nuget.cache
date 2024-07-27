@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OJ00/3yqcTF4lRy9MJg6bdeYc6azJ283hV60NHP0ajuazNMakAKGIU9NAFkXOT8eAo77icPvoNanDH0ofJu06w==",
+  "dgSpecHash": "YgSJANFtSaQkYq946qEq5Q064eJQ/GVXgblXXpp+lvl2fKUAKNy64aNlqvOHX24KvmuKEWocGaDGWpaWYuPaUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\josem\\source\\repos\\Proyecto-Consultorio\\View\\View.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josem\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
+    "C:\\Users\\josem\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\microsoft.data.sqlclient\\5.2.1\\microsoft.data.sqlclient.5.2.1.nupkg.sha512",

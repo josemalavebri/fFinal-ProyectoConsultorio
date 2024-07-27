@@ -59,7 +59,6 @@ C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\C
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.EditarMedico_form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Medico_form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Paciente.Paciente_form.resources
-C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Principal_form.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.csproj.GenerateResource.cache
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.AssemblyInfoInputs.cache
@@ -75,3 +74,6 @@ C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\r
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Paciente.Form_BuscarPaciente.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.Vista.Cita_Form.Form_CitaTipo.resources
 C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Paciente.Gestion_Paciente_form.resources
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\ConsultorioPrivado.Vista.Dispensario.Dispensario_Form.resources
+C:\Users\josem\source\repos\Proyecto-Consultorio\View\obj\Debug\net8.0-windows\View.Vista.Turnos.Form_Turno.resources

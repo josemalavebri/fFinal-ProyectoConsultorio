@@ -13,10 +13,9 @@ namespace Vista.Utilidad
     {
         private static bool columnasIniciadas = true;
 
-
-
         //Método para dar formato al DataGridView, recibimos dos paramateros uno tipo DataGrid y otro int para la selección del color.
-        public static void Formato(DataGridView pData)
+        
+        public static void Formato(DataGridView pData, bool editar)
         { // Fuente para las filas
             pData.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
             // Fuente para las columnas
@@ -56,24 +55,25 @@ namespace Vista.Utilidad
             pData.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
             pData.AlternatingRowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
 
+            if (editar)
+            {
+                DataGridViewButtonColumn colEditar = new DataGridViewButtonColumn();
+                DataGridViewButtonColumn colEliminar = new DataGridViewButtonColumn();
 
-            DataGridViewButtonColumn colEditar = new DataGridViewButtonColumn();
-            DataGridViewButtonColumn colEliminar = new DataGridViewButtonColumn();
-
-            colEditar.Text = "Editar";
-            colEditar.Name = "Editar";
-            colEditar.UseColumnTextForButtonValue = true;
+                colEditar.Text = "Editar";
+                colEditar.Name = "Editar";
+                colEditar.UseColumnTextForButtonValue = true;
 
 
-            colEliminar.Text = "Eliminar";
-            colEliminar.Name = "Eliminar";
-            colEliminar.UseColumnTextForButtonValue = true;
+                colEliminar.Text = "Eliminar";
+                colEliminar.Name = "Eliminar";
+                colEliminar.UseColumnTextForButtonValue = true;
 
-            pData.Columns.Add(colEditar);
-            pData.Columns.Add(colEliminar);
+                pData.Columns.Add(colEditar);
+                pData.Columns.Add(colEliminar);
 
-            columnasIniciadas = true;
-
+                columnasIniciadas = true;
+            }
 
         }
     }

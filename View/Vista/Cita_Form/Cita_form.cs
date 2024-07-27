@@ -34,7 +34,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private void Cita_form_Load(object sender, EventArgs e)
         {
             citas_dgv.DataSource = controladorCita.ObtenerPorCita();
-            DGVDisenio.Formato(citas_dgv);
+            DGVDisenio.Formato(citas_dgv, false);
 
         }
     }

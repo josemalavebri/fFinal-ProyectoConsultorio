@@ -16,22 +16,22 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 {
     public partial class Agregar_Cita_Form : Form
     {
-        //OBJETOS
+        //Objetos
         private Pacientes paciente;
         private CitaMedica citaMedica;
         private Medico medicoActual;
         private int idTurno;
-        //private MedicoTurno medicoTurno;
+        private int pacienteId;
 
         private bool nuevoPaciente;
         private List<Pacientes> listaPacientes;
         private List<Medico> listaMedico;
-        //CONTROLADORES
+        
+        //Controladores
         private ControladorCita controladorCita;
         private ControladorTurno controladorTurno;
         private ControladorMedico controladorMedico;
         private ControladorPaciente controladorPaciente;
-        private int pacienteId;
 
         public Agregar_Cita_Form(Pacientes paciente)
         {
@@ -109,12 +109,12 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             }
         }
 
-
         private CitaMedica CrearObjetoCitaMedica()
         {
             citaMedica.IdPaciente = this.pacienteId;
             citaMedica.Descripcion = description_text.Text;
             citaMedica.IdMedicoTurno = idTurno;
+            
             return citaMedica;
         }
 
