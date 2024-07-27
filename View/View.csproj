@@ -47,4 +47,8 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Utilidad\Validacion\" />
+  </ItemGroup>
+
 </Project>

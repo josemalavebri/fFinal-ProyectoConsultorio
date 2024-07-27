@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConsultorioPrivado.Vista.Cita_Form;
+using View.Utilidad.Validaciones;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
@@ -30,6 +31,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         public Gestion_Paciente_form(bool boolCita)
         {
             InitializeComponent();
+            InicializarValidacion();
             controladorPaciente = new ControladorPaciente();
             this.boolCita = boolCita;
         }
@@ -38,11 +40,20 @@ namespace ConsultorioPrivado.Vista.Paciente
         public Gestion_Paciente_form(bool boolEdit, int pacienteId)
         {
             InitializeComponent();
+            InicializarValidacion();
             controladorPaciente = new ControladorPaciente();
             this.boolEdit = boolEdit;
             this.pacienteId = pacienteId;
         }
 
+        private void InicializarValidacion()
+        {
+            cedula_textBox.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
+            txt_edad.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
+            nombre_textBox.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxLetras);
+            apellido_textBox.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxLetras);
+            telefono_textBox.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
+        }
 
         private Pacientes crearPacienteEntidad()
         {
