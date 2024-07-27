@@ -22,3 +22,15 @@ C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Model\obj\Debug\net8.0\Mode
 C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Model\obj\Debug\net8.0\refint\Model.dll
 C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Model\obj\Debug\net8.0\Model.pdb
 C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Model\obj\Debug\net8.0\ref\Model.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\bin\Debug\net8.0\Model.deps.json
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\bin\Debug\net8.0\Model.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\bin\Debug\net8.0\Model.pdb
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.AssemblyInfoInputs.cache
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.AssemblyInfo.cs
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.csproj.CoreCompileInputs.cache
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.sourcelink.json
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\refint\Model.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\Model.pdb
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Model\obj\Debug\net8.0\ref\Model.dll

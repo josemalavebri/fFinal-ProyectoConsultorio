@@ -30,3 +30,19 @@ C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Controller\obj\Debug\net8.0
 C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Controller\obj\Debug\net8.0\refint\Controller.dll
 C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Controller\obj\Debug\net8.0\Controller.pdb
 C:\Users\HP\Source\Repos\fFinal-ProyectoConsultorio2\Controller\obj\Debug\net8.0\ref\Controller.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Controller.deps.json
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Controller.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Controller.pdb
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Model.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Model.pdb
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.csproj.AssemblyReference.cache
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.AssemblyInfoInputs.cache
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.AssemblyInfo.cs
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.csproj.CoreCompileInputs.cache
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.sourcelink.json
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.csproj.Up2Date
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\refint\Controller.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controller.pdb
+C:\Repositorios Git\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\ref\Controller.dll
