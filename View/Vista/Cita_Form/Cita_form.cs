@@ -31,6 +31,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         {
             Form formcita = new Form_CitaTipo();
             formcita.ShowDialog();
+            CargarDataGrid();
         }
 
         private void Cita_form_Load(object sender, EventArgs e)

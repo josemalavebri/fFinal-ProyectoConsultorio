@@ -54,9 +54,10 @@ namespace Vista.Utilidad
             pData.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 192, 192);
             pData.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Black;
             pData.AlternatingRowsDefaultCellStyle.Padding = new Padding(0, 3, 0, 3);
-
-
+           
+            
             OcultarColumnaId(pData);
+
             if (editar)
             {
                 AgregarColumnaEditar(pData);

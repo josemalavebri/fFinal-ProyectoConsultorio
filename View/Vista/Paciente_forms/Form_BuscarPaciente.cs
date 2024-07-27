@@ -62,11 +62,11 @@ namespace ConsultorioPrivado.Vista.Paciente
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgv_paciente.Rows[e.RowIndex];
-                paciente.Id = Convert.ToInt32(row.Cells["id"].Value);
+                paciente.Id = Convert.ToInt32(row.Cells["Id"].Value);
                 paciente.Nombre = row.Cells["Nombre"].Value.ToString();
                 paciente.Apellido = row.Cells["Apellido"].Value.ToString();
 
-                // paciente.Edad = Convert.ToInt32(row.Cells["Edad"].Value);
+                paciente.Edad = Convert.ToInt32(row.Cells["Edad"].Value);
                 paciente.Correo = row.Cells["Correo"].Value.ToString();
                 paciente.Telefono = Convert.ToInt32(row.Cells["Telefono"].Value);
             }

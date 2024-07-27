@@ -18,6 +18,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
     {
         //Objetos
         private Pacientes paciente;
+        private bool pacienteNuevo;
         private CitaMedica citaMedica;
         private Medico medicoActual;
 
@@ -34,12 +35,18 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private ControladorMedico controladorMedico;
         private ControladorPaciente controladorPaciente;
 
+
         public Form_GestionCita(Pacientes paciente)
         {
-            Instanciador(paciente);
+            Instanciador(paciente, true);
         }
 
-        private void Instanciador(Pacientes paciente)
+        public Form_GestionCita(Pacientes paciente, bool pacienteNuevo)
+        {
+            Instanciador(paciente, pacienteNuevo);
+        }
+
+        private void Instanciador(Pacientes paciente, bool pacienteNuevo)
         {
             InitializeComponent();
 
@@ -54,28 +61,39 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             controladorPaciente = new ControladorPaciente();
 
             this.paciente = paciente;
+            this.pacienteNuevo = pacienteNuevo;
+
         }
 
 
 
         private void Agregar_Cita_Form_Load(object sender, EventArgs e)
         {
-            CargarGrid();
+            CargarGrid(pacienteNuevo);
             HabilitarEventoReset();
             Button_ControlForms.DesabilitarBotones(resetear_button);
         }
 
-        private void CargarGrid()
+        private void CargarGrid(bool pacienteNuevo)
         {
-            combo_Pacientes.DataSource = listaPacientes;
-            DataTable dataTablePaciente = controladorPaciente.ObtenerPorCedula(paciente);
-
-            foreach (DataRow row in dataTablePaciente.Rows)
+            if (pacienteNuevo)
             {
-                this.pacienteId = Convert.ToInt32(row["Id"]);
-                break;
-            }
+                combo_Pacientes.DataSource = listaPacientes;
+                DataTable dataTablePaciente = controladorPaciente.ObtenerPorCedula(paciente);
 
+                foreach (DataRow row in dataTablePaciente.Rows)
+                {
+                    this.pacienteId = Convert.ToInt32(row["id"]);
+                    break;
+                }
+                 this.pacienteId = paciente.Id;
+
+            }
+            else
+            {
+                pacienteId = paciente.Id;
+            }
+          
 
             listaMedico = new List<Medico>();
             DataTable dataTableMedico = controladorMedico.ObtenerPorMedico();
@@ -109,6 +127,8 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                 citaMedica = CrearObjetoCitaMedica();
                 if (controladorCita.CrearCita(citaMedica))
                     MessageBox.Show("Cita Creada Exitosamente");
+                this.Close();
+
             }
             catch (Exception ex)
             {
@@ -121,7 +141,6 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             citaMedica.IdPaciente = this.pacienteId;
             citaMedica.Descripcion = description_text.Text;
             citaMedica.IdMedicoTurno = idTurno;
-            
             return citaMedica;
         }
 
