@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Validaciones;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
@@ -23,7 +24,13 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
             controladorPaciente = new ControladorPaciente();
             InitializeComponent();
+            InicializarValidacion();
             paciente = new Pacientes();
+        }
+
+        private void InicializarValidacion()
+        {
+            cedula_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
         }
 
         private void CargarDataGrid()

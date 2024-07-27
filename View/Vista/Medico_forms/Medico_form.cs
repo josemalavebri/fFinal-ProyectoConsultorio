@@ -92,7 +92,7 @@ namespace ConsultorioPrivado.Vista
         }*/
 
         private void medicos_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {/*
             if (medicos_dgv.Columns[e.ColumnIndex].Name == "Editar")
             {
                 int idMedico = Convert.ToInt32(medicos_dgv.CurrentRow.
@@ -114,7 +114,7 @@ namespace ConsultorioPrivado.Vista
                     controladorMedico.EliminarMedico<Medico>(medico);
                     CargarDataGrid();
                 }
-            }
+            }*/
         }
 
         private void buscar_button_Click_1(object sender, EventArgs e)

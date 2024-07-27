@@ -1712,19 +1712,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josem\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josem\\source\\repos\\Proyecto-Consultorio\\Controller\\Controller.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\source\\repos\\fFinal-ProyectoConsultorio2\\Controller\\Controller.csproj",
       "projectName": "Controller",
-      "projectPath": "C:\\Users\\josem\\source\\repos\\Proyecto-Consultorio\\Controller\\Controller.csproj",
-      "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josem\\source\\repos\\Proyecto-Consultorio\\Controller\\obj\\",
+      "projectPath": "C:\\Users\\HP\\source\\repos\\fFinal-ProyectoConsultorio2\\Controller\\Controller.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\source\\repos\\fFinal-ProyectoConsultorio2\\Controller\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1732,14 +1732,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\josem\\source\\repos\\Proyecto-Consultorio\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\josem\\source\\repos\\Proyecto-Consultorio\\Model\\Model.csproj"
+            "C:\\Users\\HP\\source\\repos\\fFinal-ProyectoConsultorio2\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\HP\\source\\repos\\fFinal-ProyectoConsultorio2\\Model\\Model.csproj"
             }
           }
         }
@@ -1780,7 +1781,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
