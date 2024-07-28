@@ -21,7 +21,7 @@
     <Compile Update="Dispensario_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vista\Cita_Form\Form_GestionCita.cs">
+    <Compile Update="Vista\Cita_Form\Agregar_Cita_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\Cita_Form\Cita_form.cs">

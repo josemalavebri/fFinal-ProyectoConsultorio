@@ -102,7 +102,6 @@
             paciente_dgv.Size = new Size(843, 191);
             paciente_dgv.TabIndex = 23;
             paciente_dgv.CellClick += paciente_dgv_CellClick;
-            paciente_dgv.CellContentClick += paciente_dgv_CellContentClick;
             // 
             // Paciente_form
             // 

@@ -19,6 +19,7 @@ namespace ConsultorioPrivado.Vista.Paciente
     {
         private Pacientes paciente;
         private ControladorPaciente controladorPaciente;
+        private ErrorProvider errorProvider = new ErrorProvider();
 
         public Form_BuscarPaciente()
         {

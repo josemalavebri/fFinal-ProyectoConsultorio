@@ -2,6 +2,8 @@
 using ConsultorioPrivado.Controlador.Enums;
 using ConsultorioPrivado.Datos.Interface;
 using ConsultorioPrivado.Utilidad.Forms;
+using ConsultorioPrivado.Vista.Cita_Form;
+using ConsultorioPrivado.Vista.Paciente;
 using Microsoft.Identity.Client.NativeInterop;
 using Modelo;
 using System;
@@ -13,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Validaciones;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 
@@ -20,32 +23,41 @@ namespace ConsultorioPrivado.Vista
 {
     public partial class Gestion_Medico_form : Form
     {
-        ControladorMedico controlador;//ya la
-        public Gestion_Medico_form()//ya la
+        private ControladorMedico controladorMedico;
+        private bool boolEdit;
+        private bool boolCita;
+        private int medicoId;
+        private int medicoEspecialidad;
+        private ErrorProvider errorProvider = new ErrorProvider();
+
+        public Gestion_Medico_form()
         {
             InitializeComponent();
-            cedula_text.TextChanged += textBoxes_TextChanged;
-            nombre_text.TextChanged += textBoxes_TextChanged;
-            apellido_text.TextChanged += textBoxes_TextChanged;
-            correoText.TextChanged += textBoxes_TextChanged;
-            controlador = new ControladorMedico();
+            InicializarValidacion();
+            controladorMedico = new ControladorMedico();
             Button_ControlForms.DesabilitarBotones(resetear_button);
         }
 
-        private void agregar_button_Click(object sender, EventArgs e)//ya la
+        public Gestion_Medico_form(bool boolEdit, int medicoId, int medicoEspecialidad)
         {
-            
-            Medico medico = crearMedicoEntidad();
-            if(controlador.CrearMedico<Medico>(medico))
-            {
-                MessageBox.Show("Medico Insertado Correctamente");
-                this.Close();
-            };
-            vaciarTexts();
-            
+            InitializeComponent();
+            InicializarValidacion();
+            controladorMedico = new ControladorMedico();
+            this.boolEdit = boolEdit;
+            this.medicoId = medicoId;
+            this.medicoEspecialidad = medicoEspecialidad;
+
         }
 
-        private Medico crearMedicoEntidad()//ya la
+        private void InicializarValidacion()
+        {
+            nombre_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxLetras);
+            apellido_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxLetras);
+            cedula_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
+            telefono_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
+        }
+
+        private Medico crearMedicoEntidad()
         {
             Medico medico = new Medico();
             medico.Cedula = Convert.ToInt32(cedula_text.Text.ToString());
@@ -57,41 +69,76 @@ namespace ConsultorioPrivado.Vista
             return medico;
         }
 
-        private void button1_Click(object sender, EventArgs e)//ya la
+        private void agregarDatosFormularios()
         {
-            vaciarTexts();
-            Button_ControlForms.DesabilitarBotones(resetear_button);
+
+            Medico medicos = new Medico();
+            medicos.Id = medicoId;
+            DataTable datosPaciente = controladorMedico.ObtenerMedicoPorId(medicos);
+            if (datosPaciente.Rows.Count > 0)
+            {
+                DataRow row = datosPaciente.Rows[0];
+                nombre_text.Text = row["nombre"].ToString();
+                apellido_text.Text = row["apellido"].ToString();
+                cedula_text.Text = row["cedula"].ToString();
+                correoText.Text = row["correo"].ToString();
+                telefono_text.Text = row["telefono"].ToString();
+            }
+            especialidad_combo.SelectedIndex = this.medicoEspecialidad -1;
+            especialidad_combo.Enabled = false;
         }
 
-        private void textBoxes_TextChanged(object sender, EventArgs e)//ya la
+        private void HabilitarEventoReset()
         {
-            TextBox textBox = sender as TextBox;
+            Reset_ControlForms.Evento_HabilitarReset(resetear_button, nombre_text, apellido_text, cedula_text, telefono_text);
+        }
 
-            if (textBox != null)
+        private void add_Medico_form_Load(object sender, EventArgs e)
+        {
+            cedula_text.Focus();
+            Button_ControlForms.DesabilitarBotones(resetear_button);
+            HabilitarEventoReset();
+            if (boolEdit)
             {
-                resetearButtonEstado(true);
+                agregarDatosFormularios();
             }
         }
 
-        private void vaciarTexts()//ya la
-        {
-            Text_ControlForms.EliminarTextos(cedula_text, nombre_text, apellido_text, correoText);
-        }
-
-        private void resetearButtonEstado(bool estado)//ya la
-        {
-            Button_ControlForms.DesabilitarBotones(resetear_button);
-
-        }
-
-        private void cancelar_button_Click(object sender, EventArgs e)//ya la
+        private void cancelar_button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void AgregarMedico_form_Load(object sender, EventArgs e)
+        private void agregar_button_Click(object sender, EventArgs e)
         {
+            Medico medico = crearMedicoEntidad();
+            if (boolEdit)
+            {
+                medico.Id = this.medicoId;
+                medico.Especialidad_id = this.medicoEspecialidad;
+                controladorMedico.ActualizarMedico(medico);
+                MessageBox.Show("Medico editado con exito");
+                this.Close();
+            }
 
+            else
+            {
+                controladorMedico.CrearMedico(medico);
+                MessageBox.Show("Medico creado con exito");
+                this.Close();
+            }
+        }
+
+        private void resetear_button_Click(object sender, EventArgs e)
+        {
+            vaciarTexts();
+            resetear_button.Enabled = false;
+        }
+
+        private void vaciarTexts()
+        {
+            Text_ControlForms.EliminarTextos(nombre_text, apellido_text, cedula_text, telefono_text);
+            cedula_text.Focus();
         }
     }
 }
