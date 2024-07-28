@@ -15,6 +15,7 @@ namespace ConsultorioPrivado.Datos
 
         //CADENA DE CONEXION
         //private SqlConnection conexion = new SqlConnection("server=LAPTOP-3RL0DTQR\\MSSQLSERVERR; database=Consultorio; Integrated Security=true; TrustServerCertificate=true");
+
         private SqlConnection conexion = new SqlConnection("server=Robert; database=Consultorio; Integrated Security=true; TrustServerCertificate=true");
 
 
@@ -35,6 +36,7 @@ namespace ConsultorioPrivado.Datos
             }
             return conexion;
         }
+
         //CIERRA UNA CONEXION
 
         public SqlConnection CerrarConexion()
@@ -51,5 +53,6 @@ namespace ConsultorioPrivado.Datos
             }
             return conexion;
         }
+
     }
 }

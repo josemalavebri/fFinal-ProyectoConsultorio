@@ -24,21 +24,26 @@ namespace ConsultorioPrivado.Vista
         private ControladorMedico controladorMedico;
         private Medico medico;
         private ErrorProvider errorProvider = new ErrorProvider();
+        
         public Medico_form()
         {
             controladorMedico = new ControladorMedico();
             InitializeComponent();
             InicializarValidacion();
+
             if (medico == null)
             {
                 medico = new Medico();
             }
+
         }
+
 
         private void InicializarValidacion()
         {
             cedula_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
         }
+
 
         public void CargarDataGrid()
         {
@@ -103,7 +108,7 @@ namespace ConsultorioPrivado.Vista
         {
             CargarDataGrid();
             InicializarValidacion();
-            DGVDisenio.Formato(medicos_dgv, true);
+            DGVDisenio.Formato(medicos_dgv, true,true);
         }
 
         private void buscar_button_Click(object sender, EventArgs e)
