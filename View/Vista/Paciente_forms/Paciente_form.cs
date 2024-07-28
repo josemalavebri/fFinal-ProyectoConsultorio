@@ -19,6 +19,7 @@ namespace ConsultorioPrivado.Vista.Paciente
     {
         private ControladorPaciente controladorPaciente;
         private Pacientes paciente;
+        private ErrorProvider errorProvider = new ErrorProvider();
         public Paciente_form()
         {
             controladorPaciente = new ControladorPaciente();
@@ -96,10 +97,6 @@ namespace ConsultorioPrivado.Vista.Paciente
             }
         }
 
-        private void paciente_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void Paciente_form_Load(object sender, EventArgs e)
         {

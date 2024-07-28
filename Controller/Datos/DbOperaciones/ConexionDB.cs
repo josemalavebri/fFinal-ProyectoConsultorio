@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Azure.Core.Pipeline;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,7 +16,10 @@ namespace ConsultorioPrivado.Datos
 
         //CADENA DE CONEXION
         private SqlConnection conexion = new SqlConnection("server=LAPTOP-3RL0DTQR\\MSSQLSERVERR; database=Consultorio; Integrated Security=true; TrustServerCertificate=true");
-
+        /* Nombres de servidores
+         * Malave = Robert
+         * Falconi = LAPTOP-3RL0DTQR\\MSSQLSERVERR
+         */
 
         //ABRE UNA CONEXION
         public SqlConnection AbrirConexion()

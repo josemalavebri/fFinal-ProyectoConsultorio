@@ -28,7 +28,7 @@ namespace ConsultorioPrivado.Controlador.Controlers
             return controladorCreator.ObtenerEntidad(E_ROL._MEDICO);
         }
 
-        public DataTable ObtenerPorId<T>(T entidad) where T : IEntidad
+        public DataTable ObtenerMedicoPorId<T>(T entidad) where T : IEntidad
         {
             return controladorCreator.ObtenerPorId(entidad, E_ROL._MEDICO);
         }

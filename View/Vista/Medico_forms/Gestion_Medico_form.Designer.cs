@@ -111,7 +111,7 @@
             // 
             // agregar_button
             // 
-            agregar_button.Location = new Point(47, 280);
+            agregar_button.Location = new Point(44, 280);
             agregar_button.Name = "agregar_button";
             agregar_button.Size = new Size(75, 23);
             agregar_button.TabIndex = 8;
@@ -121,13 +121,13 @@
             // 
             // resetear_button
             // 
-            resetear_button.Location = new Point(150, 280);
+            resetear_button.Location = new Point(176, 280);
             resetear_button.Name = "resetear_button";
             resetear_button.Size = new Size(75, 23);
             resetear_button.TabIndex = 9;
             resetear_button.Text = "Resetear";
             resetear_button.UseVisualStyleBackColor = true;
-            resetear_button.Click += button1_Click;
+            resetear_button.Click += resetear_button_Click;
             // 
             // telefono_text
             // 
@@ -165,7 +165,7 @@
             // 
             // cancelar_button
             // 
-            cancelar_button.Location = new Point(107, 319);
+            cancelar_button.Location = new Point(111, 324);
             cancelar_button.Name = "cancelar_button";
             cancelar_button.Size = new Size(75, 23);
             cancelar_button.TabIndex = 14;
@@ -173,7 +173,7 @@
             cancelar_button.UseVisualStyleBackColor = true;
             cancelar_button.Click += cancelar_button_Click;
             // 
-            // AgregarMedico_form
+            // Gestion_Medico_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -193,10 +193,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "AgregarMedico_form";
+            Name = "Gestion_Medico_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar Medico";
-            Load += AgregarMedico_form_Load;
+            Load += add_Medico_form_Load;
             ResumeLayout(false);
             PerformLayout();
         }

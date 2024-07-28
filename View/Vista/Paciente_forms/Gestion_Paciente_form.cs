@@ -21,7 +21,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         private bool boolEdit;
         private bool boolCita;
         private int pacienteId;
-
+        private ErrorProvider errorProvider = new ErrorProvider();
         public Gestion_Paciente_form()
         {
             InitializeComponent();

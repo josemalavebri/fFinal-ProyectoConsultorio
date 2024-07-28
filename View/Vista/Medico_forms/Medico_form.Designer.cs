@@ -46,7 +46,7 @@
             buscar_button.TabIndex = 17;
             buscar_button.Text = "Buscar";
             buscar_button.UseVisualStyleBackColor = true;
-            buscar_button.Click += buscar_button_Click_1;
+            buscar_button.Click += buscar_button_Click;
             // 
             // cedula_text
             // 

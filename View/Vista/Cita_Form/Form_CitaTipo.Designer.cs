@@ -61,7 +61,7 @@
             Controls.Add(btn_pacienteNuevo);
             Name = "Form_CitaTipo";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Cita";
             ResumeLayout(false);
         }
 

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Validaciones;
 using View.Vista.Cita_Form;
 using Vista.Utilidad;
 
@@ -19,10 +20,17 @@ namespace ConsultorioPrivado.Vista.Cita_Form
     {
 
         ControladorCita controladorCita;
+        private ErrorProvider errorProvider = new ErrorProvider();
         public Cita_form()
         {
             InitializeComponent();
+            InicializarValidacion();
             controladorCita = new ControladorCita();
+        }
+
+        private void InicializarValidacion()
+        {
+            cedula_text.KeyPress += new KeyPressEventHandler(Validaciones.VerificarTextBoxNumeros);
         }
 
         private void nuevo_button_Click(object sender, EventArgs e)
