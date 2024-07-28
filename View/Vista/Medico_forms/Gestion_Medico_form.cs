@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Exceptions;
 using View.Utilidad.Validaciones;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
@@ -116,15 +117,20 @@ namespace ConsultorioPrivado.Vista
             {
                 medico.Id = this.medicoId;
                 medico.Especialidad_id = this.medicoEspecialidad;
-                controladorMedico.ActualizarMedico(medico);
-                MessageBox.Show("Medico editado con exito");
+                if (!controladorMedico.ActualizarMedico(medico))
+                {
+                    throw new ExceptionActualizarEntidad("Error al actualizar Medico");
+
+                }
                 this.Close();
             }
 
             else
             {
-                controladorMedico.CrearMedico(medico);
-                MessageBox.Show("Medico creado con exito");
+                if (!controladorMedico.CrearMedico(medico))
+                {
+                    throw new ExceptionCrearEntidad("Error al crear Medico");
+                }
                 this.Close();
             }
         }

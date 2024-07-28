@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConsultorioPrivado.Vista.Cita_Form;
 using View.Utilidad.Validaciones;
+using View;
+using View.Utilidad;
+using View.Utilidad.Exceptions;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
@@ -118,16 +121,18 @@ namespace ConsultorioPrivado.Vista.Paciente
             Pacientes paciente = crearPacienteEntidad();
             if (boolEdit)
             {
-                controladorPaciente.ActualizarPaciente(paciente);
+                if (!controladorPaciente.ActualizarPaciente(paciente))
+                {
+                    throw new ExceptionObtenerEntidad("Error al Crear pacientes");
+                };
 
-                MessageBox.Show("Paciente Editado con exito");
 
             }
             else
             {
-                if (controladorPaciente.CrearPaciente(paciente))
+                if (!controladorPaciente.CrearPaciente(paciente))
                 {
-                    MessageBox.Show("Paciente creado con exito");
+                    throw new ExceptionObtenerEntidad("Error al Crear pacientes");
                 }
             }
 

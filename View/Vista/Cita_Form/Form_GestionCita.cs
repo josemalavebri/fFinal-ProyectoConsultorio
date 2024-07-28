@@ -11,6 +11,7 @@ using ConsultorioPrivado.Controlador.Controlers;
 using ConsultorioPrivado.Utilidad.Forms;
 using Controladores.Controlador.Controlers;
 using Modelo;
+using View.Utilidad.Exceptions;
 
 namespace ConsultorioPrivado.Vista.Cita_Form
 {
@@ -86,14 +87,14 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                     this.pacienteId = Convert.ToInt32(row["id"]);
                     break;
                 }
-                 this.pacienteId = paciente.Id;
+                this.pacienteId = paciente.Id;
 
             }
             else
             {
                 pacienteId = paciente.Id;
             }
-          
+
 
             listaMedico = new List<Medico>();
             DataTable dataTableMedico = controladorMedico.ObtenerPorMedico();
@@ -107,7 +108,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                     Apellido = row["Apellido"].ToString(),
                     Especialidad_id = Convert.ToInt32(row["idEspecialidadFk"].ToString())
                 };
-                
+
                 listaMedico.Add(medico);
             }
             combo_Medicos.DataSource = listaMedico;
@@ -122,18 +123,14 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private void agregar_button_Click(object sender, EventArgs e)
         {
-            try
+            citaMedica = CrearObjetoCitaMedica();
+            if (!controladorCita.CrearCita(citaMedica))
             {
-                citaMedica = CrearObjetoCitaMedica();
-                if (controladorCita.CrearCita(citaMedica))
-                    MessageBox.Show("Cita Creada Exitosamente");
-                this.Close();
+                throw new ExceptionCrearEntidad("Error al crear Medico");
 
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.Close();
+
         }
 
         private CitaMedica CrearObjetoCitaMedica()
@@ -182,7 +179,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         }
 
-    
+
 
         private void turnos_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -190,7 +187,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             {
                 DataGridViewRow row = turnos_dgv.Rows[e.RowIndex];
                 idTurno = Convert.ToInt32(row.Cells["id"].Value.ToString());
-                txt_turnoFecha.Text =  row.Cells["fecha"].Value.ToString().Substring(0,10);
+                txt_turnoFecha.Text = row.Cells["fecha"].Value.ToString().Substring(0, 10);
                 txt_turnoHora.Text = row.Cells["Hora"].Value.ToString() + ":" +
                     row.Cells["minuto"].Value.ToString();
             }

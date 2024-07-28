@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Exceptions;
 using View.Vista.Cita_Form;
 using Vista.Utilidad;
 
@@ -56,7 +57,10 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                 DialogResult result = MostrarMensaje();
                 if (result == DialogResult.OK)
                 {
-                    controladorCita.EliminarCita(citaMedica);
+                    if (!controladorCita.EliminarCita(citaMedica))
+                    {
+                        throw new ExceptionEliminarEntidad("Error al Crear pacientes");
+                    }
                     CargarDataGrid();
                 }
             }

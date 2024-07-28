@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AdhgLnGsuQKGmGrRnUPOUTndSh4NoY1Qh+OpNAK2/FcumeoGKS6S1o7cDSraKQXnBTagkw4rYcI2o2AnleuWyQ==",
+  "dgSpecHash": "ImHJNT9R5WfSUSPYApfEILh5vuJ9WFVvYA++yIPOeqgWnrr3g0eROjeKfyAUS2wlsvEWVDFTudfcc56P957hIw==",
   "success": true,
   "projectFilePath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\View\\View.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\josem\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
+    "C:\\Users\\josem\\.nuget\\packages\\nunit\\4.1.0\\nunit.4.1.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

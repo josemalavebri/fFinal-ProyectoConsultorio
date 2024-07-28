@@ -231,3 +231,5 @@ C:\Repositorios Git\fFinal-ProyectoConsultorio\View\bin\Debug\net8.0-windows\Mod
 C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\View.csproj.Up2Date
 C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\View.genruntimeconfig.cache
 C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\ref\View.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\View\bin\Debug\net8.0-windows\nunit.framework.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\View\bin\Debug\net8.0-windows\nunit.framework.legacy.dll

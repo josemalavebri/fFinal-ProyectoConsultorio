@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Exceptions;
 using View.Utilidad.Validaciones;
 using Vista.Utilidad;
 
@@ -91,7 +92,10 @@ namespace ConsultorioPrivado.Vista.Paciente
                 DialogResult result = MostrarMensaje();
                 if (result == DialogResult.OK)
                 {
-                    controladorPaciente.EliminarPaciente(paciente);
+                    if (controladorPaciente.EliminarPaciente(paciente))
+                    {
+                        throw new ExceptionEliminarEntidad("Error al Crear pacientes");
+                    }
                     CargarDataGrid();
                 }
             }
