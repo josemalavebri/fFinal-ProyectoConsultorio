@@ -28,6 +28,7 @@ namespace ConsultorioPrivado.Vista.Paciente
             controladorPaciente = new ControladorPaciente();
             this.boolEdit = false;
         }
+
         public Gestion_Paciente_form(bool boolCita)
         {
             InitializeComponent();
@@ -118,22 +119,29 @@ namespace ConsultorioPrivado.Vista.Paciente
             if (boolEdit)
             {
                 controladorPaciente.ActualizarPaciente(paciente);
-            }
 
-            if (controladorPaciente.CrearPaciente(paciente))
+                MessageBox.Show("Paciente Editado con exito");
+
+            }
+            else
             {
-                MessageBox.Show("Paciente creado con exito");
-                this.Close();
+                if (controladorPaciente.CrearPaciente(paciente))
+                {
+                    MessageBox.Show("Paciente creado con exito");
+                }
             }
 
             if (boolCita)
             {
                 Form form = new Form_GestionCita(paciente);
                 form.ShowDialog();
-                this.Close();
 
             }
+            this.Close();
+
         }
+
+
 
         private void resetear_button_Click(object sender, EventArgs e)
         {
