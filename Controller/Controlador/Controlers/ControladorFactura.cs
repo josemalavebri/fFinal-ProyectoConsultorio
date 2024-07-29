@@ -34,5 +34,9 @@ namespace Controller.Controlador.Controlers
         {
             return controlador.ObtenerEntidad(E_ROL._TIPO_PAGO);
         }
+        public DataTable ObtenerFacturas()
+        {
+            return controlador.ObtenerEntidad(E_ROL._FACTURA);
+        }
     }
 }
