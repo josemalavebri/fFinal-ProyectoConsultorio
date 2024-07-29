@@ -4,6 +4,9 @@
     <Compile Update="Vista\Cita_Form\Form_CitaTipo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\Factura_Forms\Form_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\Turnos\Form_Turno.cs">
       <SubType>Form</SubType>
     </Compile>

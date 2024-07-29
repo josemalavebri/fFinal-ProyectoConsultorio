@@ -40,9 +40,10 @@
             // 
             // buscar_button
             // 
-            buscar_button.Location = new Point(204, 7);
+            buscar_button.Location = new Point(233, 9);
+            buscar_button.Margin = new Padding(3, 4, 3, 4);
             buscar_button.Name = "buscar_button";
-            buscar_button.Size = new Size(96, 29);
+            buscar_button.Size = new Size(110, 39);
             buscar_button.TabIndex = 17;
             buscar_button.Text = "Buscar";
             buscar_button.UseVisualStyleBackColor = true;
@@ -50,43 +51,47 @@
             // 
             // cedula_text
             // 
-            cedula_text.Location = new Point(82, 11);
+            cedula_text.Location = new Point(94, 15);
+            cedula_text.Margin = new Padding(3, 4, 3, 4);
             cedula_text.Name = "cedula_text";
-            cedula_text.Size = new Size(100, 23);
+            cedula_text.Size = new Size(114, 27);
             cedula_text.TabIndex = 16;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 19);
+            label4.Location = new Point(14, 25);
             label4.Name = "label4";
-            label4.Size = new Size(44, 15);
+            label4.Size = new Size(55, 20);
             label4.TabIndex = 15;
             label4.Text = "Cedula";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 113);
+            label1.Location = new Point(11, 151);
             label1.Name = "label1";
-            label1.Size = new Size(115, 15);
+            label1.Size = new Size(145, 20);
             label1.TabIndex = 12;
             label1.Text = "Medicos Agregados:";
             // 
             // medicos_dgv
             // 
             medicos_dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            medicos_dgv.Location = new Point(12, 146);
+            medicos_dgv.Location = new Point(14, 195);
+            medicos_dgv.Margin = new Padding(3, 4, 3, 4);
             medicos_dgv.Name = "medicos_dgv";
-            medicos_dgv.Size = new Size(851, 191);
+            medicos_dgv.RowHeadersWidth = 51;
+            medicos_dgv.Size = new Size(973, 300);
             medicos_dgv.TabIndex = 11;
             medicos_dgv.CellClick += medicos_dgv_CellClick;
             // 
             // nuevo_button
             // 
-            nuevo_button.Location = new Point(10, 52);
+            nuevo_button.Location = new Point(11, 69);
+            nuevo_button.Margin = new Padding(3, 4, 3, 4);
             nuevo_button.Name = "nuevo_button";
-            nuevo_button.Size = new Size(172, 47);
+            nuevo_button.Size = new Size(197, 63);
             nuevo_button.TabIndex = 20;
             nuevo_button.Text = "Nuevo";
             nuevo_button.UseVisualStyleBackColor = true;
@@ -94,9 +99,10 @@
             // 
             // resetear_button
             // 
-            resetear_button.Location = new Point(325, 5);
+            resetear_button.Location = new Point(371, 7);
+            resetear_button.Margin = new Padding(3, 4, 3, 4);
             resetear_button.Name = "resetear_button";
-            resetear_button.Size = new Size(93, 31);
+            resetear_button.Size = new Size(106, 41);
             resetear_button.TabIndex = 22;
             resetear_button.Text = "Resetear";
             resetear_button.UseVisualStyleBackColor = true;
@@ -104,9 +110,9 @@
             // 
             // Medico_form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(875, 381);
+            ClientSize = new Size(1000, 508);
             Controls.Add(resetear_button);
             Controls.Add(nuevo_button);
             Controls.Add(buscar_button);
@@ -114,6 +120,7 @@
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(medicos_dgv);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Medico_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Medico";
