@@ -29,7 +29,6 @@ namespace View.Vista.Factura_Forms
             DGVDisenio.Formato(Dgv_Factura,false,false);
         }
 
-
         private void View_Facturas_Form_Load(object sender, EventArgs e)
         {
             CargarDatosGrid();
