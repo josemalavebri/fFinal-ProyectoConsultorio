@@ -233,3 +233,4 @@ C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\ref
 C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\View.pdb
 C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\View.genruntimeconfig.cache
 C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\ref\View.dll
+C:\Repositorios Git\fFinal-ProyectoConsultorio\View\obj\Debug\net8.0-windows\View.Vista.Factura_Forms.View_Facturas_Form.resources

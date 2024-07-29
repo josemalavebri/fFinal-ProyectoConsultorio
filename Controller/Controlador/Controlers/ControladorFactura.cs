@@ -17,15 +17,24 @@ namespace Controller.Controlador.Controlers
         {
             controlador = new ControladorCreator();
         }
-        public DataTable Obtener_Cita_PorIDs<T>(T entidad)where T :IEntidad
+      
+
+        public DataTable Obtener_Cita_PorIDs<T>(T entidad) where T : IEntidad
         {
             List<string> lista = new List<string>()
             {
-                "idPacienteFk", //IdPaciente
-                "idMedicoEstadoFk" //IdMedicoTurno
-            }; 
-            return controlador.ObtenerPropiedadesEspecificas(lista, entidad,E_ROL._CITA_PACIENTE);
+                "IdPaciente", //IdPaciente
+                "IdMedicoTurno" //IdMedicoTurno
+            };
+            return controlador.ObtenerPropiedadesEspecificas(lista, entidad, E_ROL._CITA_PACIENTE);
         }
+
+        public DataTable ObtenerFacturaCita() 
+        {
+            return controlador.ObtenerEntidad(E_ROL._FACTURA_CITA);
+        }
+
+
         public bool CrearFactura <T> (T entidad)where T: IEntidad
         {
             return controlador.CrearEntidad(entidad, E_ROL._FACTURA);

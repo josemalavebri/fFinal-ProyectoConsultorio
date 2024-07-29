@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Model;
 using View.Utilidad.Forms;
 using System.Windows.Navigation;
+using ConsultorioPrivado.Controlador.Controlers;
 
 namespace View.Vista.Factura_Forms
 {
@@ -19,6 +20,7 @@ namespace View.Vista.Factura_Forms
     {
         private int id_paciente, medicoturno;
         private ControladorFactura controlfact;
+
         public Form_Factura(int id_paciente, int medicoturno)
         {
             InitializeComponent();
@@ -35,13 +37,18 @@ namespace View.Vista.Factura_Forms
         }
         private void cargarCita()
         {
+
+            DataTable data = controlfact.ObtenerFacturaCita();
+
             CitaMedica cita = new CitaMedica();
             cita.IdPaciente = id_paciente;
             cita.IdMedicoTurno = medicoturno;
-            DataTable datos_cita =controlfact.Obtener_Cita_PorIDs<CitaMedica>(cita);
-            if(datos_cita.Rows.Count > 0 )
+            //DataTable datos_cita =controlfact.Obtener_Cita_PorIDs<CitaMedica>(cita);
+
+
+            if(data.Rows.Count > 0 )
             {
-                DataRow fila = datos_cita.Rows[0];
+                DataRow fila = data.Rows[0];
                 id_cita_text.Text = fila["id"].ToString();
                 id_turno_text.Text = fila["Turno"].ToString();
                 paciente_text.Text = fila["Paciente"].ToString();
@@ -51,6 +58,7 @@ namespace View.Vista.Factura_Forms
                 especialidad_text.Text = fila["Especialidad"].ToString();
                 precio_text.Text = fila["Precio"].ToString();      
             }
+
             float precio = Convert.ToSingle(precio_text.Text);
             float subtotal = calcularSub(precio);
             sub_text.Text = Convert.ToString(subtotal);
@@ -83,6 +91,8 @@ namespace View.Vista.Factura_Forms
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             Factura factura = crearFactura();
+
+
             if (controlfact.CrearFactura<Factura>(factura))
             {
                 MessageBox.Show("Factura guardada");

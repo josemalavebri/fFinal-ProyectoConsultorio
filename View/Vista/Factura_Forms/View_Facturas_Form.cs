@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.Utilidad.Forms;
+using Vista.Utilidad;
 
 namespace View.Vista.Factura_Forms
 {
@@ -24,8 +25,11 @@ namespace View.Vista.Factura_Forms
         }
         private void CargarDatosGrid()
         {
-            Dgv_Factura.DataSource = control_fac.ObtenerFacturas();
+            Dgv_Factura.DataSource = control_fac.ObtenerFacturaCita();
+            DGVDisenio.Formato(Dgv_Factura,false,false);
         }
+
+
         private void View_Facturas_Form_Load(object sender, EventArgs e)
         {
             CargarDatosGrid();

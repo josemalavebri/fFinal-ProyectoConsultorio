@@ -127,9 +127,10 @@ namespace ConsultorioPrivado.Vista.Cita_Form
             {
                 citaMedica = CrearObjetoCitaMedica();
                 if (controladorCita.CrearCita(citaMedica)) {
-                    MessageBox.Show("Cita Creada Exitosamente");   
+                    MessageBox.Show("Cita Creada Exitosamente"); 
+                     Form factura = new Form_Factura(pacienteId, idTurno);
+                    factura.ShowDialog();
                 }
-                Form factura = new Form_Factura(pacienteId, idTurno);
                 this.Close();
             }
             catch (Exception ex)

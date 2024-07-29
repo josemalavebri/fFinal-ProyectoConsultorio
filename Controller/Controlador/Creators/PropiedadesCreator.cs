@@ -83,20 +83,26 @@ namespace ConsultorioPrivado.Controlador.Creators
             int i=0 ;
             foreach(var propiedad in propiedades)
             {
-                i++;
-                string pro = (lista_propie[i]);
-                if (propiedad.Name.ToLower() == pro)
-                {
-                    var nombreParametro = $"@{propiedad.Name}";
-                    var valor = propiedad.GetValue(entidad);
-                    var tipo = MapearTipo(propiedad.PropertyType);
-                    lista.Add(new ParametrosCreator(nombreParametro, valor, tipo));
-                    break;
-                }
+               /* foreach(string pro in lista_propie)
+               // {
+                   /* if (propiedad.Name.ToLower().ToString() == pro.ToString())
+                    {*/
+                        var nombreParametro = $"@{propiedad.Name}";
+                        var valor = propiedad.GetValue(entidad);
+                        var tipo = MapearTipo(propiedad.PropertyType);
+                        lista.Add(new ParametrosCreator(nombreParametro, valor, tipo));
+                        break;
+
+                    //}
+              //  }//
+
             }
 
             return lista;
         }
+
+
+
         public List<ParametrosCreator> CrearListaPropiedadesEspecificas<T>(List<string>lista_propie,T entidad)where T: IEntidad
         {
             return ListaPropiedadesEspecificas(lista_propie,entidad);
@@ -150,6 +156,8 @@ namespace ConsultorioPrivado.Controlador.Creators
                 return SqlDbType.Date;
             if (tipo == typeof(Enum))
                 return SqlDbType.Text;
+            if (tipo == typeof(float))
+                return SqlDbType.Float;
             throw new ArgumentException("Tipo no soportado");
         }
     }
