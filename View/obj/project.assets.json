@@ -400,28 +400,6 @@
           }
         }
       },
-      "NUnit/4.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/nunit.framework.dll": {
-            "related": ".legacy.xml;.xml"
-          },
-          "lib/net6.0/nunit.framework.legacy.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/nunit.framework.dll": {
-            "related": ".legacy.xml;.xml"
-          },
-          "lib/net6.0/nunit.framework.legacy.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/_._": {}
-        }
-      },
       "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -695,8 +673,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.Data.SqlClient": "5.2.1",
-          "Model": "1.0.0",
-          "NUnit": "4.1.0"
+          "Model": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Controller.dll": {}
@@ -1265,32 +1242,6 @@
         "runtimes/win-x64/native/WebView2Loader.dll",
         "runtimes/win-x86/native/WebView2Loader.dll",
         "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "NUnit/4.1.0": {
-      "sha512": "MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg==",
-      "type": "package",
-      "path": "nunit/4.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "CHANGES.md",
-        "LICENSE.txt",
-        "NOTICES.md",
-        "README.md",
-        "THIRD_PARTY_NOTICES.md",
-        "build/NUnit.props",
-        "icon.png",
-        "lib/net462/nunit.framework.dll",
-        "lib/net462/nunit.framework.legacy.dll",
-        "lib/net462/nunit.framework.legacy.xml",
-        "lib/net462/nunit.framework.xml",
-        "lib/net6.0/nunit.framework.dll",
-        "lib/net6.0/nunit.framework.legacy.dll",
-        "lib/net6.0/nunit.framework.legacy.xml",
-        "lib/net6.0/nunit.framework.xml",
-        "nunit.4.1.0.nupkg.sha512",
-        "nunit.nuspec"
       ]
     },
     "System.ClientModel/1.0.0": {
@@ -1941,24 +1892,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ULTRA GAMING\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\josem\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ULTRA GAMING\\source\\repos\\fFinal-ProyectoConsultorio\\View\\View.csproj",
+      "projectUniqueName": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\View\\View.csproj",
       "projectName": "View",
-      "projectPath": "C:\\Users\\ULTRA GAMING\\source\\repos\\fFinal-ProyectoConsultorio\\View\\View.csproj",
-      "packagesPath": "C:\\Users\\ULTRA GAMING\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ULTRA GAMING\\Source\\Repos\\fFinal-ProyectoConsultorio\\View\\obj\\",
+      "projectPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\View\\View.csproj",
+      "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
+      "outputPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\View\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ULTRA GAMING\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1966,18 +1912,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\ULTRA GAMING\\source\\repos\\fFinal-ProyectoConsultorio\\Controller\\Controller.csproj": {
-              "projectPath": "C:\\Users\\ULTRA GAMING\\source\\repos\\fFinal-ProyectoConsultorio\\Controller\\Controller.csproj"
+            "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Controller\\Controller.csproj": {
+              "projectPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Controller\\Controller.csproj"
             },
-            "C:\\Users\\ULTRA GAMING\\source\\repos\\fFinal-ProyectoConsultorio\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\ULTRA GAMING\\source\\repos\\fFinal-ProyectoConsultorio\\Model\\Model.csproj"
+            "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Model\\Model.csproj": {
+              "projectPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Model\\Model.csproj"
             }
           }
         }
@@ -2021,7 +1966,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

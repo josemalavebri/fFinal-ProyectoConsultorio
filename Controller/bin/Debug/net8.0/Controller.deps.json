@@ -9,8 +9,7 @@
       "Controller/1.0.0": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "5.2.1",
-          "Model": "1.0.0",
-          "NUnit": "4.1.0"
+          "Model": "1.0.0"
         },
         "runtime": {
           "Controller.dll": {}
@@ -249,18 +248,6 @@
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "NUnit/4.1.0": {
-        "runtime": {
-          "lib/net6.0/nunit.framework.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
-          },
-          "lib/net6.0/nunit.framework.legacy.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.0.1.0"
           }
         }
       },
@@ -517,13 +504,6 @@
       "sha512": "sha512-N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
-    },
-    "NUnit/4.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MT/DpAhjtiytzhTgTqIhBuWx4y26PKfDepYUHUM+5uv4TsryHC2jwFo5e6NhWkApCm/G6kZ80dRjdJFuAxq3rg==",
-      "path": "nunit/4.1.0",
-      "hashPath": "nunit.4.1.0.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",

@@ -32,8 +32,6 @@ C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\Micr
 C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\NuGet.Frameworks.dll
-C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\nunit.framework.dll
-C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\nunit.framework.legacy.dll
 C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\System.ClientModel.dll
 C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Repositorios Git\fFinal-ProyectoConsultorio\TestProject\bin\Debug\net8.0\System.Diagnostics.EventLog.dll

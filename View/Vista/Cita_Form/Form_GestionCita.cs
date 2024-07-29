@@ -11,7 +11,7 @@ using ConsultorioPrivado.Controlador.Controlers;
 using ConsultorioPrivado.Utilidad.Forms;
 using Controladores.Controlador.Controlers;
 using Modelo;
-using View.Vista.Factura;
+using View.Vista.Factura_Forms;
 
 namespace ConsultorioPrivado.Vista.Cita_Form
 {
@@ -129,7 +129,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                 if (controladorCita.CrearCita(citaMedica)) {
                     MessageBox.Show("Cita Creada Exitosamente");   
                 }
-                Form factura = new Factura_Form(pacienteId, idTurno);
+                Form factura = new Form_Factura(pacienteId, idTurno);
                 this.Close();
             }
             catch (Exception ex)

@@ -12,7 +12,7 @@ using ConsultorioPrivado.Vista.Cita_Form;
 using ConsultorioPrivado.Vista.Paciente;
 using View.Utilidad.Forms;
 using View.Vista.Turnos;
-using View.Vista.Factura;
+using View.Vista.Factura_Forms;
 
 namespace ConsultorioPrivado.Vista.Dispensario
 {
