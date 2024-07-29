@@ -13,6 +13,7 @@ namespace View.Utilidad.Exceptions
         public ExceptionActualizarEntidad (string mensaje) : base(mensaje)
         {
             MessageBox.Show(mensaje);
+
         }
     }
 }
