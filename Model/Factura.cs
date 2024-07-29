@@ -12,6 +12,8 @@ namespace Model
         private int id_cita;
         private float monto;
         private int id_metodo_pago;
+        private float subtotal;
+        private const float iva = 0.15f;
         public Factura() 
         { 
             id_cita = 0;
@@ -27,5 +29,7 @@ namespace Model
         public int IdCita { get => id_cita; set => id_cita = value; }
         public float Monto { get => monto; set => monto = value; }
         public int IdMetodo_Pago {  get => id_metodo_pago;set=>id_metodo_pago=value; }
+        public float Subtotal { get => subtotal; set => subtotal = value; }
+        public float IVA { get => iva;}
     }
 }
