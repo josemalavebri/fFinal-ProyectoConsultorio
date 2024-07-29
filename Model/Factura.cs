@@ -18,6 +18,7 @@ namespace Model
             monto = 0;
             id_metodo_pago = 0;
         }
+
         public Factura(int id_cita, float monto, int id_metodo_pago)
         {
             this.id_cita = id_cita;
