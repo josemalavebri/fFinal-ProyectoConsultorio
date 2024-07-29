@@ -13,6 +13,7 @@ using ConsultorioPrivado.Vista.Paciente;
 using View.Utilidad.Forms;
 using View.Vista.Turnos;
 using View.Vista.Factura_Forms;
+using View.Vista.Factura_Forms;
 
 namespace ConsultorioPrivado.Vista.Dispensario
 {
@@ -113,8 +114,8 @@ namespace ConsultorioPrivado.Vista.Dispensario
 
         private void btn_Factura_Click(object sender, EventArgs e)
         {
-           /* Form factura_form = new Factura_Form();
-            controlPanel.AbrirFormulario(factura_form, formularioActivo);*/
+            Form factura_form = new View_Facturas_Form(controlPanel);
+            controlPanel.AbrirFormulario(factura_form, formularioActivo);
         }
     }
 }

@@ -8,6 +8,9 @@
     <Compile Update="Vista\Factura_Forms\Form_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\Factura_Forms\View_Facturas_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\Turnos\Form_Turno.cs">
       <SubType>Form</SubType>
     </Compile>
