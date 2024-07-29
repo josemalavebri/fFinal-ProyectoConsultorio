@@ -8,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.Utilidad.Forms;
 
 namespace View.Vista.Factura_Forms
 {
     public partial class View_Facturas_Form : Form
     {
         private ControladorFactura control_fac;
-        public View_Facturas_Form()
+        private ControlPanel controlPanel;
+        public View_Facturas_Form(ControlPanel controlPanel)
         {
             InitializeComponent();
             control_fac = new ControladorFactura();
+            this.controlPanel = controlPanel;
         }
         private void CargarDatosGrid()
         {
