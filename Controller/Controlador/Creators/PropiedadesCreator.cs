@@ -76,6 +76,32 @@ namespace ConsultorioPrivado.Controlador.Creators
             }
             return lista;
         }
+        private List<ParametrosCreator> ListaPropiedadesEspecificas<T>(List<string>lista_propie,T entidad)where T : IEntidad
+        {
+            lista.Clear();
+            var propiedades=typeof(T).GetProperties();
+            int i=0 ;
+            foreach(var propiedad in propiedades)
+            {
+                i++;
+                string pro = (lista_propie[i]);
+                if (propiedad.Name.ToLower() == pro)
+                {
+                    var nombreParametro = $"@{propiedad.Name}";
+                    var valor = propiedad.GetValue(entidad);
+                    var tipo = MapearTipo(propiedad.PropertyType);
+                    lista.Add(new ParametrosCreator(nombreParametro, valor, tipo));
+                    break;
+                }
+            }
+
+            return lista;
+        }
+        public List<ParametrosCreator> CrearListaPropiedadesEspecificas<T>(List<string>lista_propie,T entidad)where T: IEntidad
+        {
+            return ListaPropiedadesEspecificas(lista_propie,entidad);
+        }
+
         public List<ParametrosCreator> CrearListaPropiedadesEspecifica<T>(string propiedad,T entidad) where T : IEntidad
         {
             return ListarPropiedadEspecifica(propiedad, entidad);

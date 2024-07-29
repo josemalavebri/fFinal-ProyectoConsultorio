@@ -14,6 +14,8 @@ namespace ConsultorioPrivado.Controlador.Enums
         _CITA,
         _MEDICO_TURNO,
         _MEDICO_ESPECIALIDAD,
-        _TURNOS_ESPECIALIDAD
+        _TURNOS_ESPECIALIDAD,
+        _CITA_PACIENTE,_FACTURA,
+        _TIPO_PAGO
     }
 }

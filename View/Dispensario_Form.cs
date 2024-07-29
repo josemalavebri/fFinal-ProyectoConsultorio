@@ -10,19 +10,21 @@ using System.Windows.Forms;
 using ConsultorioPrivado.Utilidad.Forms;
 using ConsultorioPrivado.Vista.Cita_Form;
 using ConsultorioPrivado.Vista.Paciente;
+using View.Utilidad.Forms;
 using View.Vista.Turnos;
+using View.Vista.Factura;
 
 namespace ConsultorioPrivado.Vista.Dispensario
 {
     public partial class Dispensario_Form : Form
     {
         private Form formularioActivo;
-
+        private ControlPanel controlPanel;
 
         public Dispensario_Form()
         {
             InitializeComponent();
-            //controlpanel = new ControlPanel(Panel_Principal);
+            controlPanel = new ControlPanel(Panel_Principal);
         }
 
         /*private void Ptx_Menu_Click(object sender, EventArgs e)
@@ -85,7 +87,7 @@ namespace ConsultorioPrivado.Vista.Dispensario
 
         private void Btn_Pacientes_Click(object sender, EventArgs e)
         {
-            Form paciente_form = new Paciente_form();
+            Paciente_form paciente_form = new Paciente_form();
             AbrirFormularios(paciente_form);
         }
 
@@ -93,6 +95,26 @@ namespace ConsultorioPrivado.Vista.Dispensario
         {
             Form turno_form = new Form_Turno();
             AbrirFormularios(turno_form);
+        }
+
+        private void Ptx_Menu_Click(object sender, EventArgs e)
+        {
+            if (Panel_Vertical.Width == 250)
+            {
+                Panel_Vertical.Width = 68;
+                Panel_Principal.Width = 1300;
+            }
+            else
+            {
+                Panel_Vertical.Width = 250;
+                Panel_Principal.Width = 1032;
+            }
+        }
+
+        private void btn_Factura_Click(object sender, EventArgs e)
+        {
+           /* Form factura_form = new Factura_Form();
+            controlPanel.AbrirFormulario(factura_form, formularioActivo);*/
         }
     }
 }

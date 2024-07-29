@@ -60,20 +60,36 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         private void dgv_paciente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex>=0)
             {
                 DataGridViewRow row = dgv_paciente.Rows[e.RowIndex];
                 paciente.Id = Convert.ToInt32(row.Cells["Id"].Value);
+                paciente.Cedula = Convert.ToInt32(row.Cells["Cedula"].Value);
                 paciente.Nombre = row.Cells["Nombre"].Value.ToString();
                 paciente.Apellido = row.Cells["Apellido"].Value.ToString();
 
                 paciente.Edad = Convert.ToInt32(row.Cells["Edad"].Value);
-                paciente.Correo = row.Cells["Correo"].Value.ToString();
+                paciente.Correo = (row.Cells["Correo"].Value.ToString());
                 paciente.Telefono = Convert.ToInt32(row.Cells["Telefono"].Value);
             }
+            /*try
+            {
+                paciente.Id= Convert.ToInt32(dgv_paciente.SelectedRows[0].Cells[0].Value);
+                paciente.Nombre = dgv_paciente.SelectedRows[0].Cells[1].Value.ToString();
+                paciente.Apellido= dgv_paciente.SelectedRows[0].Cells[2].Value.ToString();
+                paciente.Edad = Convert.ToInt32(dgv_paciente.SelectedRows[0].Cells[3].Value);
+                paciente.Correo = dgv_paciente.SelectedRows[0].Cells[4].Value.ToString();
+                paciente.Telefono = Convert.ToInt32(dgv_paciente.SelectedRows[0].Cells[5].Value.ToString());
+
+                
+            }
+            catch
+            {
+                return;
+            }*/
+
             txt_pacienteSelec.Text = paciente.ToString();
             btn_guardar.Enabled = true;
-
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)

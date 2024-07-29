@@ -39,7 +39,12 @@ namespace ConsultorioPrivado.Controlador.Controlers
             string procedimientoAlmacenado = executeRolDB.crearProcedimientoAlmacenado(E_CODIGO_SP.SP_OBTENER_POR, rol);
             return accesoDatos.ObtenerPorID(procedimientoAlmacenado,lista);
         }
-
+        public DataTable ObtenerPropiedadesEspecificas<T>(List<string>propiedades,T entidad,E_ROL rol)where T: IEntidad
+        {
+            lista = propiedadesCreator.CrearListaPropiedadesEspecificas(propiedades,entidad);
+            string procedimientoAlmacenado = executeRolDB.crearProcedimientoAlmacenado(E_CODIGO_SP.SP_OBTENER_POR,rol);
+            return accesoDatos.ObtenerPorID(procedimientoAlmacenado ,lista);
+        }
         public DataTable ObtenerPorCedula<T>(T entidad, E_ROL rol) where T : IEntidad
         {
             lista = propiedadesCreator.CrearListaPropiedadesCedula(entidad);
