@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Enums
 {
+    //CODIGOS SP QUE VIAJAN EN STRING
     internal enum E_CODIGO_SP
     {
         SP_OBTENER_POR,

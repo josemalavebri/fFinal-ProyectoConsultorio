@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Datos.DbOperaciones
 {
+    //TESTEA LAS CONEXIONES EN LA BASE DE DATOS
     public class TestingConexionDB
     {
         private ConexionDB conn = new ConexionDB();

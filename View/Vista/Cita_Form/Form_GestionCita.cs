@@ -12,6 +12,7 @@ using ConsultorioPrivado.Utilidad.Forms;
 using Controladores.Controlador.Controlers;
 using Modelo;
 using View.Vista.Factura_Forms;
+using Vista.Utilidad;
 
 namespace ConsultorioPrivado.Vista.Cita_Form
 {
@@ -71,6 +72,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         private void Agregar_Cita_Form_Load(object sender, EventArgs e)
         {
             CargarGrid(pacienteNuevo);
+            DGVDisenio.Formato(turnos_dgv, false, false);
             HabilitarEventoReset();
             Button_ControlForms.DesabilitarBotones(resetear_button);
         }

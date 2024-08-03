@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace TestProject
 {
+    //TESTEA LAS ENTIDADES QUE SE OBTIENEN DE LA BASE DE DATOS
     [TestClass]
     public class TestObtenerEntidades
     {

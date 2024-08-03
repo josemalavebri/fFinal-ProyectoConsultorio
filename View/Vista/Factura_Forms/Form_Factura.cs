@@ -91,12 +91,13 @@ namespace View.Vista.Factura_Forms
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             Factura factura = crearFactura();
+            MessageBox.Show("Factura guardada");
 
-
-            if (controlfact.CrearFactura<Factura>(factura))
+            /*if (controlfact.CrearFactura<Factura>(factura))
             {
                 MessageBox.Show("Factura guardada");
             }
+            */
             this.Close();
         }
     }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Controladores.Controlador.Controlers
 {
+    //EJECUTA EL EL CONTROLADOR GENERICO Y LAS INSTRUCCIONES DE TIPO TURNO
     public class ControladorTurno
     {
         private ControladorCreator controladorCreator;

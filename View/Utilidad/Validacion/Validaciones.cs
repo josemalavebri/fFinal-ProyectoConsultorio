@@ -7,6 +7,8 @@ using System.Windows.Forms;
 
 namespace View.Utilidad.Validaciones
 {
+    //EJECUTA LAS ACCIONES DE CONTROL SOBRE LAS VALIDACIONES DE LOS TEXTOBOX
+
     public static class Validaciones
     {
         private static void TextBoxNumeros(object sender, KeyPressEventArgs e)

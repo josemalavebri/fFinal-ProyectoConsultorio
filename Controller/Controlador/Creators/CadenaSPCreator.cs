@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Creators
 {
+
+    //CREA LA CADENA SP QUE SE EJECUTA EN LA BASE DE DATOS
     internal class CadenaSPCreator
     {
 

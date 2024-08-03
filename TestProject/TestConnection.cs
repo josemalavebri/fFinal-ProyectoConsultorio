@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace TestProject
 {
+    //CLASE QUE TESTEA LA CONEXION
     [TestClass]
     public class TestConnection
     {

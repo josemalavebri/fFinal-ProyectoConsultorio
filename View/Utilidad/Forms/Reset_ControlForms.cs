@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Utilidad.Forms
 {
+    //EJECUTA LAS ACCIONES DE CONTROL SOBRE EL BOTON RESET Y SUS EVENTOS
+
     internal class Reset_ControlForms
     {
         private static bool textBoxesChanged = false;

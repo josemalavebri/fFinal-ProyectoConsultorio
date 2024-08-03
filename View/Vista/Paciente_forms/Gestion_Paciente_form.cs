@@ -95,7 +95,7 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         private void HabilitarEventoReset()
         {
-            Reset_ControlForms.Evento_HabilitarReset(resetear_button, nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
+            Reset_ControlForms.Evento_HabilitarReset(resetear_button, cedula_textBox,nombre_textBox, apellido_textBox, correo_textBox, telefono_textBox);
         }
 
 
@@ -111,6 +111,8 @@ namespace ConsultorioPrivado.Vista.Paciente
 
         }
 
+
+
         private void cancelar_button_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -125,8 +127,6 @@ namespace ConsultorioPrivado.Vista.Paciente
                 {
                     throw new ExceptionObtenerEntidad("Error al Crear pacientes");
                 };
-
-
             }
             else
             {
@@ -164,5 +164,6 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
 
         }
+
     }
 }

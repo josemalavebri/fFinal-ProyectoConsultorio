@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace View.Utilidad.Exceptions
 {
+    //EXEPCION QUE SE CONTROLA CUANDO SE ACTUALIZAN LOS  DATOS EN LA BASE DE DATOS
     internal class ExceptionActualizarEntidad : Exception
     {
 

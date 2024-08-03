@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace View.Utilidad.Exceptions
 {
+    //EXEPCION QUE SE CONTROLA CUANDO SE OBTIENEN LOS DATOS DE LA BASE DE DATOS
+
     internal class ExceptionObtenerEntidad : Exception
     {
 

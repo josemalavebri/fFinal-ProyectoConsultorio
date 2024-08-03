@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Enums
 {
+    //DEFINICION DE LOS ROLES EN LA BASE DE DATOS
     public enum E_ROL
     {
         _PACIENTE,

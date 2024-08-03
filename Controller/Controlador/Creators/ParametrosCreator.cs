@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Creators
 {
+
+    //CREA LOS PARAMETROS QUE SE USAN DENTRO DE LAS INSERCIONES EN LA BASE DE DATOS
     public class ParametrosCreator
     {
         private string nombre_parametro;

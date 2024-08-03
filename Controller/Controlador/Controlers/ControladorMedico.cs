@@ -13,6 +13,7 @@ namespace ConsultorioPrivado.Controlador.Controlers
 {
     //controlador que se encarga de las operaciones tipo CRUD
 
+    //EJECUTA EL EL CONTROLADOR GENERICO Y LAS INSTRUCCIONES DE TIPO MEDICO
 
     public class ControladorMedico
     {

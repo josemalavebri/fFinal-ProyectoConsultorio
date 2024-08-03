@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace View.Utilidad.Exceptions
 {
+    //EXEPCION QUE SE CONTROLA CUANDO SE ELIMINAN LOS DATOS EN LA BASE DE DATOS
+
     internal class ExceptionEliminarEntidad : Exception
     {
 
@@ -14,5 +16,7 @@ namespace View.Utilidad.Exceptions
         {
             MessageBox.Show(mensaje);
         }
+
+
     }
 }

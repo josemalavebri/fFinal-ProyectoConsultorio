@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace View.Utilidad.Forms
 {
+    //CLASE QUE TIENE UN PANEL DEFINIDO PARA CONTROLARLO
     public class ControlPanel
     {
         private Panel panel;

@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Creators
 {
+
+    //CREA LOS LAS PROPIEDADES QUE SE USARAN DENTRO DE LOS PARAMETROS
     internal class PropiedadesCreator
     {
 

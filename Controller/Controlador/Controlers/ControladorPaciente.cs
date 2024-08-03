@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Controlers
 {
+    //EJECUTA EL EL CONTROLADOR GENERICO Y LAS INSTRUCCIONES DE TIPO PACIENTE
+
     public class ControladorPaciente
     {
         private ControladorCreator controladorCreator;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Utilidad.Forms
 {
+    //EJECUTA LAS ACCIONES DE CONTROL SOBRE LOS BOTONES
     public class Button_ControlForms
     {
 

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace Controller.Controlador.Controlers
 {
+    //EJECUTA EL EL CONTROLADOR GENERICO Y LAS INSTRUCCIONES DE TIPO FACTURA
+
     public class ControladorFactura
     {
         private ControladorCreator controlador;

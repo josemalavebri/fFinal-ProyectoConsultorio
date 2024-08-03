@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace ConsultorioPrivado.Controlador.Controlers
 {
+    //CONTROLADOR GENERAL O GENERICO QUE INGRESA TODAS LAS ENTIDADES Y EJECUTA SUS OPERACIONES
     public class ControladorCreator
     {
         private List<ParametrosCreator> lista;

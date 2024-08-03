@@ -18,83 +18,43 @@ namespace ConsultorioPrivado.Datos.Interface
         public ExecuteSP()
         {
             obj_bd = new ExecuteQuery();
-            
+
         }
 
         public DataTable ObtenerPorEntidad(string sp_query)
         {
-            try
-            {
-                List<ParametrosCreator> lista = new List<ParametrosCreator>();
-                return obj_bd.ExecuteSPQuery(sp_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error  al obtener tabla de " + sp_query + " " + ex.Message);
-            }
+            List<ParametrosCreator> lista = new List<ParametrosCreator>();
+            return obj_bd.ExecuteSPQuery(sp_query, lista);
         }
 
-       
 
-        public bool CrearEntidad(string sp_Non_query,List<ParametrosCreator> lista)
+        public bool CrearEntidad(string sp_Non_query, List<ParametrosCreator> lista)
         {
-            try
-            {
-                return obj_bd.ExecuteSPNonQuery(sp_Non_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error  al crear entidad de " + sp_Non_query + " " + ex.Message);
-            }
+            return obj_bd.ExecuteSPNonQuery(sp_Non_query, lista);
         }
 
         public bool EliminarEntidad(string sp_Non_query, List<ParametrosCreator> lista)
         {
-            try
-            {
-                return obj_bd.ExecuteSPNonQuery(sp_Non_query, lista);
-            }
-            catch (Exception ex) 
-            {
-                throw new Exception("error al eliminar la entidad de " + sp_Non_query + " " + ex.Message);
-            }
+            return obj_bd.ExecuteSPNonQuery(sp_Non_query, lista);
+ 
         }
 
         public bool ActualizarEntidad(string sp_Non_query, List<ParametrosCreator> lista)
         {
-            try
-            {
-                return obj_bd.ExecuteSPNonQuery(sp_Non_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error al actualizar la entidad " + sp_Non_query + " " + ex.Message);
-            }
+            return obj_bd.ExecuteSPNonQuery(sp_Non_query, lista);
+ 
 
         }
 
         public DataTable ObtenerPorCedula(string sp_query, List<ParametrosCreator> lista)
         {
-            try
-            {
-                return obj_bd.ExecuteSPQuery(sp_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error  al obtener la cedula del " + sp_query + " " + ex.Message);
-            }
+            return obj_bd.ExecuteSPQuery(sp_query, lista);
+
         }
 
         public DataTable ObtenerPorID(string sp_query, List<ParametrosCreator> lista)
         {
-            try
-            {
-                return obj_bd.ExecuteSPQuery(sp_query, lista);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("error  al obtener la cedula del " + sp_query + " " + ex.Message);
-            }
+            return obj_bd.ExecuteSPQuery(sp_query, lista);
         }
     }
 }

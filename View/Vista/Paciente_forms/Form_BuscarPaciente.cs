@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.Utilidad.Validaciones;
+using Vista.Utilidad;
 
 namespace ConsultorioPrivado.Vista.Paciente
 {
@@ -103,6 +104,7 @@ namespace ConsultorioPrivado.Vista.Paciente
         {
             Button_ControlForms.DesabilitarBotones(btn_guardar);
             CargarDataGrid();
+            DGVDisenio.Formato(dgv_paciente,false,false);
         }
 
         private void buscar_button_Click(object sender, EventArgs e)

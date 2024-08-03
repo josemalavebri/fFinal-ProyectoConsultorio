@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace View.Utilidad.Forms
 {
+    //EJECUTA LAS ACCIONES DE CONTROL SOBRE LOS COMBOBOX
+
     public class ControlComboBox
     {
         public delegate DataTable Operacion_Sin_Parametros();
