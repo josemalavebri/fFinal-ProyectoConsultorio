@@ -2722,11 +2722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\TestProject\\TestProject.csproj",
+      "projectUniqueName": "C:\\Repositorios Git\\2do\\TestProject\\TestProject.csproj",
       "projectName": "TestProject",
-      "projectPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\TestProject\\TestProject.csproj",
+      "projectPath": "C:\\Repositorios Git\\2do\\TestProject\\TestProject.csproj",
       "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\TestProject\\obj\\",
+      "outputPath": "C:\\Repositorios Git\\2do\\TestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2743,11 +2743,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Controller\\Controller.csproj": {
-              "projectPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Controller\\Controller.csproj"
+            "C:\\Repositorios Git\\2do\\Controller\\Controller.csproj": {
+              "projectPath": "C:\\Repositorios Git\\2do\\Controller\\Controller.csproj"
             },
-            "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Model\\Model.csproj": {
-              "projectPath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\Model\\Model.csproj"
+            "C:\\Repositorios Git\\2do\\Model\\Model.csproj": {
+              "projectPath": "C:\\Repositorios Git\\2do\\Model\\Model.csproj"
             }
           }
         }

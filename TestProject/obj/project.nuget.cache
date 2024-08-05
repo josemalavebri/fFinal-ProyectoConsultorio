@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UJgIWom8mud1RdV1d6OTZIo4byLdxbEfvygU3+j9lWPybgEGAeOUqzpBh5brZiRCoUu005OBsNN3KjGh/NhFhw==",
+  "dgSpecHash": "rdWeDGQ5LvxKeTBDm81O/zYbcgr/Ctee0UySzxLPdEbG1Jr+lAu54hz3Ge3auubCnaHv3CtUyanpPZN2QwO3Yg==",
   "success": true,
-  "projectFilePath": "C:\\Repositorios Git\\fFinal-ProyectoConsultorio\\TestProject\\TestProject.csproj",
+  "projectFilePath": "C:\\Repositorios Git\\2do\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josem\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
