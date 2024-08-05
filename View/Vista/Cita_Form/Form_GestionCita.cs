@@ -164,9 +164,8 @@ namespace ConsultorioPrivado.Vista.Cita_Form
         {
             combo_Pacientes.SelectedIndex = -1;
             combo_Medicos.SelectedIndex = -1;
-            turnos_dgv.Rows.Clear();
             description_text.Text = string.Empty;
-
+            
             Button_ControlForms.HabilitarBotones(agregar_button, cancelar_button);
             Button_ControlForms.DesabilitarBotones(cancelar_button);
             Text_ControlForms.EliminarTextos(description_text);

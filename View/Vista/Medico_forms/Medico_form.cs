@@ -99,9 +99,9 @@ namespace ConsultorioPrivado.Vista
                 DialogResult result = MostrarMensaje();
                 if (result == DialogResult.OK)
                 {
-                    if (controladorMedico.EliminarMedico(medico))
+                    if (!controladorMedico.EliminarMedico(medico))
                     {
-                        throw new ExceptionEliminarEntidad("Error al Crear pacientes");
+                        throw new ExceptionEliminarEntidad("Error al Eliminar pacientes");
                     }
                     CargarDataGrid();
                 }

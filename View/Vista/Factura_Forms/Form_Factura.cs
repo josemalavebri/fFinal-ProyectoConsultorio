@@ -98,6 +98,7 @@ namespace View.Vista.Factura_Forms
                 MessageBox.Show("Factura guardada");
             }
             */
+
             this.Close();
         }
     }

@@ -49,7 +49,7 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
         private void citas_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
             if (citas_dgv.Columns[e.ColumnIndex].Name == "Eliminar")
             {
                 int id = Convert.ToInt32(citas_dgv.CurrentRow.Cells["Id"].Value.ToString()); ;
@@ -76,7 +76,12 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                     MessageBoxIcon.Question);
             return result;
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
-   
+
 }
