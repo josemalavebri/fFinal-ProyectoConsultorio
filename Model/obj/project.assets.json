@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repositorios Git\\2do\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Repositorios Git\\2do\\Model\\Model.csproj",
+      "projectPath": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Repositorios Git\\2do\\Model\\obj\\",
+      "outputPath": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",

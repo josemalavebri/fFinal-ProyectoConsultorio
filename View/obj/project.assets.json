@@ -668,7 +668,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Controller/1.0.0": {
+      "Controllers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -676,10 +676,10 @@
           "Model": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Controller.dll": {}
+          "bin/placeholder/Controllers.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Controller.dll": {}
+          "bin/placeholder/Controllers.dll": {}
         }
       },
       "Model/1.0.0": {
@@ -1873,10 +1873,10 @@
         "version.txt"
       ]
     },
-    "Controller/1.0.0": {
+    "Controllers/1.0.0": {
       "type": "project",
-      "path": "../Controller/Controller.csproj",
-      "msbuildProject": "../Controller/Controller.csproj"
+      "path": "../Controller/Controllers.csproj",
+      "msbuildProject": "../Controller/Controllers.csproj"
     },
     "Model/1.0.0": {
       "type": "project",
@@ -1886,7 +1886,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "Controller >= 1.0.0",
+      "Controllers >= 1.0.0",
       "FontAwesome.Sharp >= 6.3.0",
       "Model >= 1.0.0"
     ]
@@ -1897,11 +1897,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repositorios Git\\2do\\View\\View.csproj",
+      "projectUniqueName": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\View\\View.csproj",
       "projectName": "View",
-      "projectPath": "C:\\Repositorios Git\\2do\\View\\View.csproj",
+      "projectPath": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\View\\View.csproj",
       "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
-      "outputPath": "C:\\Repositorios Git\\2do\\View\\obj\\",
+      "outputPath": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\View\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1918,11 +1918,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Repositorios Git\\2do\\Controller\\Controller.csproj": {
-              "projectPath": "C:\\Repositorios Git\\2do\\Controller\\Controller.csproj"
+            "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Controller\\Controllers.csproj": {
+              "projectPath": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Controller\\Controllers.csproj"
             },
-            "C:\\Repositorios Git\\2do\\Model\\Model.csproj": {
-              "projectPath": "C:\\Repositorios Git\\2do\\Model\\Model.csproj"
+            "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Model\\Model.csproj": {
+              "projectPath": "C:\\Repositorios Git\\Tercer Copia\\fFinal-ProyectoConsultorio\\Model\\Model.csproj"
             }
           }
         }

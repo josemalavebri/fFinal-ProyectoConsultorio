@@ -1,0 +1,16 @@
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.csproj.AssemblyReference.cache
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.AssemblyInfoInputs.cache
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.AssemblyInfo.cs
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.csproj.CoreCompileInputs.cache
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.sourcelink.json
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Controllers.deps.json
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Controllers.dll
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Controllers.pdb
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Model.dll
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\bin\Debug\net8.0\Model.pdb
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controll.01F35609.Up2Date
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.dll
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\refint\Controllers.dll
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\Controllers.pdb
+C:\Repositorios Git\Tercer Copia\fFinal-ProyectoConsultorio\Controller\obj\Debug\net8.0\ref\Controllers.dll

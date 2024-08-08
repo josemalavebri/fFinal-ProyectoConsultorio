@@ -1,6 +1,8 @@
-﻿namespace ConsultorioPrivado.Vista.Cita_Form
+﻿using Modelo;
+
+namespace ConsultorioPrivado.Vista.Cita_Form
 {
-    public class MedicoTurno
+    public class MedicoTurno : IEntidad
     {
         private int id;
         private int idTurno;

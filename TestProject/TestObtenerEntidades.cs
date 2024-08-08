@@ -57,7 +57,7 @@ namespace TestProject
             //Arrange
             ControladorTurno controladorTurno = new ControladorTurno();
             //Act
-            DataTable actualDataTable = controladorTurno.ObtenerTurnos();
+            DataTable actualDataTable = controladorTurno.ObtenerTurnosEstado();
 
             //Assert
             Assert.IsNotNull(actualDataTable);

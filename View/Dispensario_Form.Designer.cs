@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Panel_Vertical = new Panel();
+            btn_Factura = new FontAwesome.Sharp.IconButton();
             Ptx_Menu = new PictureBox();
             btn_turnos = new FontAwesome.Sharp.IconButton();
             Bnt_Citas = new FontAwesome.Sharp.IconButton();
@@ -38,7 +39,6 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             Panel_Principal = new Panel();
-            btn_Factura = new FontAwesome.Sharp.IconButton();
             Panel_Vertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Ptx_Menu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -58,16 +58,39 @@
             Panel_Vertical.Controls.Add(pictureBox2);
             Panel_Vertical.Dock = DockStyle.Left;
             Panel_Vertical.Location = new Point(0, 0);
+            Panel_Vertical.Margin = new Padding(3, 2, 3, 2);
             Panel_Vertical.Name = "Panel_Vertical";
-            Panel_Vertical.Size = new Size(248, 665);
+            Panel_Vertical.Size = new Size(217, 499);
             Panel_Vertical.TabIndex = 0;
+            // 
+            // btn_Factura
+            // 
+            btn_Factura.BackColor = Color.FromArgb(0, 185, 240);
+            btn_Factura.FlatAppearance.BorderColor = Color.White;
+            btn_Factura.FlatAppearance.BorderSize = 0;
+            btn_Factura.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Factura.ForeColor = SystemColors.ButtonHighlight;
+            btn_Factura.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            btn_Factura.IconColor = Color.White;
+            btn_Factura.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Factura.IconSize = 40;
+            btn_Factura.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_Factura.Location = new Point(10, 398);
+            btn_Factura.Margin = new Padding(3, 2, 3, 2);
+            btn_Factura.Name = "btn_Factura";
+            btn_Factura.Size = new Size(197, 61);
+            btn_Factura.TabIndex = 53;
+            btn_Factura.Text = "Factura";
+            btn_Factura.UseVisualStyleBackColor = false;
+            btn_Factura.Click += btn_Factura_Click;
             // 
             // Ptx_Menu
             // 
             Ptx_Menu.Image = View.Properties.Resources.Menu_Icon;
-            Ptx_Menu.Location = new Point(9, 0);
+            Ptx_Menu.Location = new Point(8, 0);
+            Ptx_Menu.Margin = new Padding(3, 2, 3, 2);
             Ptx_Menu.Name = "Ptx_Menu";
-            Ptx_Menu.Size = new Size(51, 31);
+            Ptx_Menu.Size = new Size(45, 23);
             Ptx_Menu.SizeMode = PictureBoxSizeMode.Zoom;
             Ptx_Menu.TabIndex = 0;
             Ptx_Menu.TabStop = false;
@@ -85,9 +108,10 @@
             btn_turnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_turnos.IconSize = 40;
             btn_turnos.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_turnos.Location = new Point(12, 444);
+            btn_turnos.Location = new Point(10, 333);
+            btn_turnos.Margin = new Padding(3, 2, 3, 2);
             btn_turnos.Name = "btn_turnos";
-            btn_turnos.Size = new Size(225, 81);
+            btn_turnos.Size = new Size(197, 61);
             btn_turnos.TabIndex = 52;
             btn_turnos.Text = "Turnos";
             btn_turnos.UseVisualStyleBackColor = false;
@@ -105,11 +129,12 @@
             Bnt_Citas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             Bnt_Citas.IconSize = 40;
             Bnt_Citas.ImageAlign = ContentAlignment.MiddleLeft;
-            Bnt_Citas.Location = new Point(12, 357);
+            Bnt_Citas.Location = new Point(10, 268);
+            Bnt_Citas.Margin = new Padding(3, 2, 3, 2);
             Bnt_Citas.Name = "Bnt_Citas";
-            Bnt_Citas.Size = new Size(223, 81);
+            Bnt_Citas.Size = new Size(195, 61);
             Bnt_Citas.TabIndex = 51;
-            Bnt_Citas.Text = "Citas";
+            Bnt_Citas.Text = "Tickets";
             Bnt_Citas.UseVisualStyleBackColor = false;
             Bnt_Citas.Click += Bnt_Citas_Click;
             // 
@@ -125,9 +150,10 @@
             btn_Inicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Inicio.IconSize = 40;
             btn_Inicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Inicio.Location = new Point(12, 96);
+            btn_Inicio.Location = new Point(10, 72);
+            btn_Inicio.Margin = new Padding(3, 2, 3, 2);
             btn_Inicio.Name = "btn_Inicio";
-            btn_Inicio.Size = new Size(222, 81);
+            btn_Inicio.Size = new Size(194, 61);
             btn_Inicio.TabIndex = 44;
             btn_Inicio.Text = "Inicio";
             btn_Inicio.UseVisualStyleBackColor = false;
@@ -145,9 +171,10 @@
             Btn_Medicos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             Btn_Medicos.IconSize = 40;
             Btn_Medicos.ImageAlign = ContentAlignment.MiddleLeft;
-            Btn_Medicos.Location = new Point(12, 270);
+            Btn_Medicos.Location = new Point(10, 202);
+            Btn_Medicos.Margin = new Padding(3, 2, 3, 2);
             Btn_Medicos.Name = "Btn_Medicos";
-            Btn_Medicos.Size = new Size(222, 81);
+            Btn_Medicos.Size = new Size(194, 61);
             Btn_Medicos.TabIndex = 48;
             Btn_Medicos.Text = "Medicos";
             Btn_Medicos.UseVisualStyleBackColor = false;
@@ -164,9 +191,10 @@
             Btn_Pacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             Btn_Pacientes.IconSize = 40;
             Btn_Pacientes.ImageAlign = ContentAlignment.MiddleLeft;
-            Btn_Pacientes.Location = new Point(12, 183);
+            Btn_Pacientes.Location = new Point(10, 137);
+            Btn_Pacientes.Margin = new Padding(3, 2, 3, 2);
             Btn_Pacientes.Name = "Btn_Pacientes";
-            Btn_Pacientes.Size = new Size(222, 81);
+            Btn_Pacientes.Size = new Size(194, 61);
             Btn_Pacientes.TabIndex = 50;
             Btn_Pacientes.Text = "Pacientes";
             Btn_Pacientes.UseVisualStyleBackColor = false;
@@ -177,18 +205,19 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(64, 46);
+            label1.Location = new Point(56, 34);
             label1.Name = "label1";
-            label1.Size = new Size(178, 25);
+            label1.Size = new Size(146, 20);
             label1.TabIndex = 47;
             label1.Text = "Dispensario medico";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = View.Properties.Resources.Dispensario_Icon;
-            pictureBox2.Location = new Point(9, 32);
+            pictureBox2.Location = new Point(8, 24);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(51, 49);
+            pictureBox2.Size = new Size(45, 37);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 46;
             pictureBox2.TabStop = false;
@@ -198,39 +227,21 @@
             Panel_Principal.AccessibleRole = AccessibleRole.None;
             Panel_Principal.BackColor = SystemColors.ButtonHighlight;
             Panel_Principal.Dock = DockStyle.Fill;
-            Panel_Principal.Location = new Point(248, 0);
+            Panel_Principal.Location = new Point(217, 0);
+            Panel_Principal.Margin = new Padding(3, 2, 3, 2);
             Panel_Principal.Name = "Panel_Principal";
-            Panel_Principal.Size = new Size(1034, 665);
+            Panel_Principal.Size = new Size(905, 499);
             Panel_Principal.TabIndex = 0;
-            // 
-            // btn_Factura
-            // 
-            btn_Factura.BackColor = Color.FromArgb(0, 185, 240);
-            btn_Factura.FlatAppearance.BorderColor = Color.White;
-            btn_Factura.FlatAppearance.BorderSize = 0;
-            btn_Factura.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Factura.ForeColor = SystemColors.ButtonHighlight;
-            btn_Factura.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
-            btn_Factura.IconColor = Color.White;
-            btn_Factura.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_Factura.IconSize = 40;
-            btn_Factura.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Factura.Location = new Point(12, 531);
-            btn_Factura.Name = "btn_Factura";
-            btn_Factura.Size = new Size(225, 81);
-            btn_Factura.TabIndex = 53;
-            btn_Factura.Text = "Factura";
-            btn_Factura.UseVisualStyleBackColor = false;
-            btn_Factura.Click += btn_Factura_Click;
             // 
             // Dispensario_Form
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1282, 665);
+            ClientSize = new Size(1122, 499);
             Controls.Add(Panel_Principal);
             Controls.Add(Panel_Vertical);
             IsMdiContainer = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Dispensario_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dispensario";

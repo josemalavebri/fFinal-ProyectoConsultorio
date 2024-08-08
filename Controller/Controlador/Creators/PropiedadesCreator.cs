@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsultorioPrivado.Controlador.Creators
 {
@@ -160,6 +161,8 @@ namespace ConsultorioPrivado.Controlador.Creators
                 return SqlDbType.Text;
             if (tipo == typeof(float))
                 return SqlDbType.Float;
+            if (tipo == typeof(bool))
+                return SqlDbType.Bit;
             throw new ArgumentException("Tipo no soportado");
         }
     }

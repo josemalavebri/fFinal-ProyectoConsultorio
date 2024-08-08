@@ -32,8 +32,6 @@ namespace View.Vista.Factura_Forms
         private void Form_Factura_Load(object sender, EventArgs e)
         {
             cargarCita();
-            ControlComboBox.ver_Combo_Entidad_Sin_Parametros(combo_Metodo,controlfact.ObtenerTipoPago,
-                                                            "tipoPago", "id");
         }
         private void cargarCita()
         {
@@ -77,7 +75,6 @@ namespace View.Vista.Factura_Forms
         private Factura crearFactura()
         {
             Factura factura = new Factura();
-            factura.IdMetodo_Pago = Convert.ToInt32(combo_Metodo.SelectedValue);
             factura.IdCita = Convert.ToInt32(id_cita_text.Text);
             factura.Subtotal = Convert.ToSingle(sub_text.Text); 
             factura.Monto = Convert.ToInt32(total_text.Text);

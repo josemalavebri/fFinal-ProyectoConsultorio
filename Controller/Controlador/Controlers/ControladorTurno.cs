@@ -21,15 +21,21 @@ namespace Controladores.Controlador.Controlers
 
         }
 
+        public DataTable ObtenerTurnosEstado()
+        {
+            return controladorCreator.ObtenerEntidad(E_ROL._TURNOESTADO);
+        }
+
         public DataTable ObtenerTurnos()
         {
-            return controladorCreator.ObtenerEntidad(E_ROL._MEDICO_TURNO);
+            return controladorCreator.ObtenerEntidad(E_ROL._TURNO);
         }
+
 
 
         public DataTable ObtenerTurnosPorId<T>(T entidad) where T : IEntidad
         {
-            return controladorCreator.ObtenerPorId  (entidad,E_ROL._MEDICO_TURNO);
+            return controladorCreator.ObtenerPorId  (entidad,E_ROL._TURNO);
         }
 
 
@@ -41,18 +47,17 @@ namespace Controladores.Controlador.Controlers
 
         public bool CrearTurno<T>(T entidad) where T : IEntidad
         {
-            return controladorCreator.CrearEntidad(entidad, E_ROL._MEDICO_TURNO);
+            return controladorCreator.CrearEntidad(entidad, E_ROL._TURNO);
         }
 
         public bool EliminarTurno<T>(T entidad) where T : IEntidad
         {
-            return controladorCreator.EliminarEntidad(entidad, E_ROL._MEDICO_TURNO);
+            return controladorCreator.EliminarEntidad(entidad, E_ROL._TURNO);
         }
-
 
         public bool ActualizarTurno<T>(T entidad) where T : IEntidad
         {
-            return controladorCreator.ActualizarEntidad(entidad, E_ROL._MEDICO_TURNO);
+            return controladorCreator.ActualizarEntidad(entidad, E_ROL._TURNO);
         }
     }
 

@@ -64,7 +64,6 @@ namespace ConsultorioPrivado.Vista.Cita_Form
 
             this.paciente = paciente;
             this.pacienteNuevo = pacienteNuevo;
-
         }
 
 
@@ -90,7 +89,6 @@ namespace ConsultorioPrivado.Vista.Cita_Form
                     break;
                 }
                  this.pacienteId = paciente.Id;
-
             }
             else
             {
